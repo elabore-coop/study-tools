@@ -1,7 +1,5 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
 access_study_author_admin,study.author.admin,model_study_author,base.group_user,1,1,1,1
-access_study_eligibility_study_excl_admin,study.eligibility.study.excl.admin,model_study_eligibility_study_excl,base.group_user,1,1,1,1
-access_study_eligibility_study_incl_admin,study.eligibility.study.incl.admin,model_study_eligibility_study_incl,base.group_user,1,1,1,1
 access_study_eligibility_topic_admin,study.eligibility.topic.admin,model_study_eligibility_topic,base.group_user,1,1,1,1
 access_study_eligibility_condition_body_site_admin,study.eligibility.condition.body.site.admin,model_study_eligibility_condition_body_site,base.group_user,1,1,1,1
 access_study_eligibility_condition_clinical_status_admin,study.eligibility.condition.clinical.status.admin,model_study_eligibility_condition_clinical_status,base.group_user,1,1,1,1
@@ -23,5 +21,6 @@ access_study_questionnaire_subject_type_admin,study.questionnaire.subject.type.a
 access_study_questionnaire_status_admin,study.questionnaire.status.admin,model_study_questionnaire_status,base.group_user,1,1,1,1
 access_study_participant_progress_status_admin,study.participant.progress.status.admin,model_study_participant_progress_status,base.group_user,1,1,1,1
 access_study_participant_state_admin,study.participant.state.admin,model_study_participant_state,base.group_user,1,1,1,1
+access_study_questionnaire_progress_status_admin,study.questionnaire.progress.status.admin,model_study_questionnaire_progress_status,base.group_user,1,1,1,1
 access_study_questionnaire_response_state_admin,study.questionnaire.response.state.admin,model_study_questionnaire_response_state,base.group_user,1,1,1,1
 access_study_questionnaire_response_progress_status_admin,study.questionnaire.response.progress.status.admin,model_study_questionnaire_response_progress_status,base.group_user,1,1,1,1

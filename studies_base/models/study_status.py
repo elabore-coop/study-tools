@@ -8,5 +8,6 @@ class StudStatus(models.Model):
     _name = "study.status"
 
     name = fields.Char("Name")
+    value = fields.Char("Value")
     sequence = fields.Integer("Sequence")
 

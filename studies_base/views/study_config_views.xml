@@ -55,9 +55,21 @@
         <field name="name">study.participant.state.tree</field>
         <field name="model">study.participant.state</field>        
         <field name="arch" type="xml">
-            <tree string="États des participations" editable="bottom">
+            <tree string="États des participations (participants)" editable="bottom">
                 <field name="sequence" widget="handle"/>
                 <field name="name"/>                
+                <field name="value" />
+            </tree>
+        </field>
+    </record>
+    <record id="view_study_participant_progress_status_tree" model="ir.ui.view">
+        <field name="name">study.participant.progress.status.tree</field>
+        <field name="model">study.participant.progress.status</field>        
+        <field name="arch" type="xml">
+            <tree string="Statuts de participation (participants)" editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>                
+                <field name="value" />
             </tree>
         </field>
     </record>
@@ -97,7 +109,30 @@
         <field name="arch" type="xml">
             <tree string="États des réponses" editable="bottom">
                 <field name="sequence" widget="handle"/>
+                <field name="name"/>    
+                <field name="value" />            
+            </tree>
+        </field>
+    </record>
+    <record id="view_study_questionnaire_response_progress_status_tree" model="ir.ui.view">
+        <field name="name">study.questionnaire.response.progress.status.tree</field>
+        <field name="model">study.questionnaire.response.progress.status</field>        
+        <field name="arch" type="xml">
+            <tree string="Statuts des réponses aux questionnaires" editable="bottom">
+                <field name="sequence" widget="handle"/>
                 <field name="name"/>                
+                <field name="value" />
+            </tree>
+        </field>
+    </record>
+    <record id="view_study_questionnaire_progress_status_tree" model="ir.ui.view">
+        <field name="name">study.questionnaire.progress.status.tree</field>
+        <field name="model">study.questionnaire.progress.status</field>        
+        <field name="arch" type="xml">
+            <tree string="Statuts des questionnaires" editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>                
+                <field name="value" />
             </tree>
         </field>
     </record>
@@ -105,9 +140,10 @@
         <field name="name">study.questionnaire.status.tree</field>
         <field name="model">study.questionnaire.status</field>        
         <field name="arch" type="xml">
-            <tree string="Statuts de publication" editable="bottom">
+            <tree string="Statuts de publication (questionnaire)" editable="bottom">
                 <field name="sequence" widget="handle"/>
-                <field name="name"/>                
+                <field name="name"/>
+                <field name="value" />     
             </tree>
         </field>
     </record>
@@ -145,9 +181,10 @@
         <field name="name">study.status.tree</field>
         <field name="model">study.status</field>        
         <field name="arch" type="xml">
-            <tree string="Status des études" editable="bottom">
+            <tree string="Statuts de publication des études" editable="bottom">
                 <field name="sequence" widget="handle"/>
                 <field name="name"/>                
+                <field name="value" />
             </tree>
         </field>
     </record>
@@ -174,57 +211,72 @@
 
     <!-- ACTIONS -->
     <record id="action_study_author" model="ir.actions.act_window">
-        <field name="name">Platformes techniques d'étuder</field>
+        <field name="name">Platformes techniques d'étude</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.author</field>        
     </record>
     <record id="action_study_eligibility_condition_body_site" model="ir.actions.act_window">
-        <field name="name">Localisations anatomiques des affectionsr</field>
+        <field name="name">Localisations anatomiques des affections</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.eligibility.condition.body.site</field>        
     </record>
     <record id="action_study_eligibility_condition_clinical_status" model="ir.actions.act_window">
-        <field name="name">Statuts des affectations (malade, ancien malade...)r</field>
+        <field name="name">Statuts des affectations (malade, ancien malade...)</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.eligibility.condition.clinical.status</field>        
     </record>
     <record id="action_study_eligibility_topic" model="ir.actions.act_window">
-        <field name="name">Thématiques de rechercher</field>
+        <field name="name">Thématiques de recherche</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.eligibility.topic</field>        
     </record>
     <record id="action_study_gender" model="ir.actions.act_window">
-        <field name="name">Genresr</field>
+        <field name="name">Genres</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.gender</field>        
     </record>
     <record id="action_study_participant_state" model="ir.actions.act_window">
-        <field name="name">États des participationsr</field>
+        <field name="name">États des participations (participants)</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.participant.state</field>        
     </record>
+    <record id="action_study_participant_progress_status" model="ir.actions.act_window">
+        <field name="name">Statuts de participation (participants)</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">study.participant.progress.status</field>        
+    </record>
     <record id="action_study_phase" model="ir.actions.act_window">
-        <field name="name">Phasesr</field>
+        <field name="name">Phases</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.phase</field>        
     </record>
     <record id="action_study_purpose_type" model="ir.actions.act_window">
-        <field name="name">Objectifsr</field>
+        <field name="name">Objectifs</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.purpose.type</field>        
     </record>
     <record id="action_study_questionnaire_category" model="ir.actions.act_window">
-        <field name="name">Catégories de questionnairer</field>
+        <field name="name">Catégories de questionnaire</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.questionnaire.category</field>        
     </record>
     <record id="action_study_questionnaire_response_state" model="ir.actions.act_window">
-        <field name="name">États des réponsesr</field>
+        <field name="name">États des réponses</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.questionnaire.response.state</field>        
     </record>
+    <record id="action_study_questionnaire_response_progress_status" model="ir.actions.act_window">
+        <field name="name">Statuts des réponses aux questionnaires</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">study.questionnaire.response.progress.status</field>        
+    </record>
+    <record id="action_study_questionnaire_progress_status" model="ir.actions.act_window">
+        <field name="name">Statuts des questionnaires</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">study.questionnaire.progress.status</field>        
+    </record>
     <record id="action_study_questionnaire_status" model="ir.actions.act_window">
-        <field name="name">Statuts de publicationr</field>
+        <field name="name">Statuts de publication (questionnaires)</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.questionnaire.status</field>        
     </record>
@@ -239,80 +291,98 @@
         <field name="res_model">study.questionnaire.type</field>        
     </record>
     <record id="action_study_region" model="ir.actions.act_window">
-        <field name="name">Zones géographiques étudiéesr</field>
+        <field name="name">Zones géographiques étudiées</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.region</field>        
     </record>
     <record id="action_study_status" model="ir.actions.act_window">
-        <field name="name">Status des étudesr</field>
+        <field name="name">Statuts de publication des études</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.status</field>        
     </record>
     <record id="action_study_tag" model="ir.actions.act_window">
-        <field name="name">Mots-clés des étudesr</field>
+        <field name="name">Mots-clés des études</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.tag</field>        
     </record>
     <record id="action_study_type" model="ir.actions.act_window">
-        <field name="name">Types d'étudesr</field>
+        <field name="name">Types d'études</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.type</field>        
     </record>
     
-
+    
     <!-- MENUS -->
-    <menuitem id="menu_study_config" name="Configuration" parent="studies_base.menu_study_main">
-        <menuitem id="menu_study_author"
-            action="action_study_author"
-            sequence="1"/>
-        <menuitem id="menu_study_eligibility_condition_body_site"
-            action="action_study_eligibility_condition_body_site"
-            sequence="2"/>
-        <menuitem id="menu_study_eligibility_condition_clinical_status"
-            action="action_study_eligibility_condition_clinical_status"
-            sequence="3"/>
-        <menuitem id="menu_study_eligibility_topic"
-            action="action_study_eligibility_topic"
-            sequence="4"/>
-        <menuitem id="menu_study_gender"
-            action="action_study_gender"
-            sequence="5"/>
-        <menuitem id="menu_study_participant_state"
-            action="action_study_participant_state"
-            sequence="6"/>
-        <menuitem id="menu_study_phase"
-            action="action_study_phase"
-            sequence="7"/>
-        <menuitem id="menu_study_purpose_type"
-            action="action_study_purpose_type"
-            sequence="8"/>
-        <menuitem id="menu_study_questionnaire_category"
-            action="action_study_questionnaire_category"
-            sequence="9"/>
-        <menuitem id="menu_study_questionnaire_response_state"
-            action="action_study_questionnaire_response_state"
-            sequence="10"/>
-        <menuitem id="menu_study_questionnaire_status"
-            action="action_study_questionnaire_status"
-            sequence="11"/>
-        <menuitem id="menu_study_questionnaire_subject_type"
-            action="action_study_questionnaire_subject_type"
-            sequence="12"/>
-        <menuitem id="menu_study_questionnaire_type"
-            action="action_study_questionnaire_type"
-            sequence="13"/>
-        <menuitem id="menu_study_region"
-            action="action_study_region"
-            sequence="14"/>
-        <menuitem id="menu_study_status"
-            action="action_study_status"
-            sequence="15"/>
-        <menuitem id="menu_study_tag"
-            action="action_study_tag"
-            sequence="16"/>
-        <menuitem id="menu_study_type"
-            action="action_study_type"
-            sequence="17"/>
+    <menuitem id="menu_study_config" name="Configuration" parent="menu_study_main" sequence="2">
+        <menuitem id="menu_study_study_config" name="Études">
+            <menuitem id="menu_study_author"
+                action="action_study_author"
+                sequence="1" />
+            <menuitem id="menu_study_eligibility_condition_body_site"
+                action="action_study_eligibility_condition_body_site"
+                sequence="2"/>
+            <menuitem id="menu_study_eligibility_condition_clinical_status"
+                action="action_study_eligibility_condition_clinical_status"
+                sequence="3"/>
+            <menuitem id="menu_study_eligibility_topic"
+                action="action_study_eligibility_topic"
+                sequence="4"/>
+            <menuitem id="menu_study_gender"
+                action="action_study_gender"
+                sequence="5"/>
+            <menuitem id="menu_study_phase"
+                action="action_study_phase"
+                sequence="7"/>
+            <menuitem id="menu_study_purpose_type"
+                action="action_study_purpose_type"
+                sequence="8"/>
+            <menuitem id="menu_study_region"
+                action="action_study_region"
+                sequence="14"/>
+            <menuitem id="menu_study_status"
+                action="action_study_status"
+                sequence="15"/>
+            <menuitem id="menu_study_tag"
+                action="action_study_tag"
+                sequence="16"/>
+            <menuitem id="menu_study_type"
+                action="action_study_type"
+                sequence="17"/>
+        </menuitem>
+        <menuitem id="menu_study_participant_config" name="Participants">
+            <menuitem id="menu_study_participant_state"
+                action="action_study_participant_state"
+                sequence="6"/>
+            <menuitem id="menu_study_participant_progress_status"
+                action="action_study_participant_progress_status"
+                sequence="6"/>
+        </menuitem>
+        <menuitem id="menu_study_questionnaire_config" name="Questionnaires">
+            <menuitem id="menu_study_questionnaire_category"
+                action="action_study_questionnaire_category"
+                sequence="9"/>
+            <menuitem id="menu_study_questionnaire_progress_status"
+                action="action_study_questionnaire_progress_status"
+                sequence="10"/>
+            <menuitem id="menu_study_questionnaire_status"
+                action="action_study_questionnaire_status"
+                sequence="11"/>
+            <menuitem id="menu_study_questionnaire_subject_type"
+                action="action_study_questionnaire_subject_type"
+                sequence="12"/>
+            <menuitem id="menu_study_questionnaire_type"
+                action="action_study_questionnaire_type"
+                sequence="13"/>
+        </menuitem>
+        <menuitem id="menu_study_questionnaire_response_config" name="Réponses aux questionnaires">
+            <menuitem id="menu_study_questionnaire_response_state"
+                action="action_study_questionnaire_response_state"
+                sequence="10"/>
+            <menuitem id="menu_study_questionnaire_response_progress_status"
+                action="action_study_questionnaire_response_progress_status"
+                sequence="10"/>
+        </menuitem>
+        
     
     </menuitem>
 

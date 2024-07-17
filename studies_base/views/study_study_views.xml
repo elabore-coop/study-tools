@@ -17,14 +17,99 @@
         <field name="model">study.study</field>        
         <field name="arch" type="xml">
             <form string="Étude">
-                <field name="name"/>                
+                <header>
+                    <!-- action buttons -->
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <!-- big buttons -->
+                    </div>
+                
+                    <div class="oe_title">
+                        <h1>
+                            <label for="title" string="Nom de l'étude" /><field name="title" />
+                        </h1>
+                        <h2>
+                            <label for="name" string="Acronyme" /><field name="name" />
+                        </h2>
+                    </div>
+                    <group name="study_status" string="Statut">
+                        <group name="study_status_left">
+                            <field name="period_start" />
+                            <field name="period_end" />
+                            <field name="progress_status" />
+                        </group>
+                        <group name="study_status_right">
+                            
+                        </group>
+                    </group>
+                    <group name="description" string="Description">
+                        <group name="description_left">
+                            <field name="type" />
+                            <field name="description_summary" />
+                            <field name="description" />
+                            <field name="keyword" />
+                            <field name="primary_purpose_type" />                            
+                        </group>
+                        <group name="description_right">
+                            <field name="part_of" />
+                            <field name="ppc_reference" />
+                            <field name="version" />
+                            <field name="phase" />
+                            <field name="status" />
+                        </group>
+                    </group>
+                    <group name="technique" string="Technique">
+                        <group name="technique_left">
+                            <field name="site" />
+                            <field name="author" />
+                            <field name="identitifer_author" />
+                        </group>
+                        <group name="technique_right">
+                            <field name="identifier_primary_id" />
+                            <field name="create_date" />
+                            <field name="write_date" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Recrutement" name="recruitment">
+                            <group name="recruitment">
+                                <group name="recruitment_left">
+                                    <field name="recruitment_target_number" />
+                                    <field name="recruitment_max_number" />
+                                    <field name="recruitment_eligibility_gender" widget="many2many_tags" />
+                                    <field name="recruitment_eligibility_age_min" />
+                                    <field name="recruitment_eligibility_age_max" />
+                                    <field name="recruitment_eligibility_condition_clinical_status" widget="many2many_tags" />
+                                </group>
+                                <group name="recruitment_right">
+                                    <field name="recruitment_eligibility_condition_body_site" widget="many2many_tags" />
+                                    <field name="recruitment_eligibility_study_incl" widget="many2many_tags" />
+                                    <field name="recruitment_eligibility_study_excl" widget="many2many_tags" />
+                                    <field name="recruitment_eligibility_description" />
+                                    <field name="recruitment_eligibility_topic" widget="many2many_tags" />
+                                    <field name="region" widget="many2many_tags" />
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Questionnaires" name="questionnaires">
+                            <field name="questionnaires" />
+                        </page>
+                        <page string="Contacts / Chercheurs" name="contacts">
+                            <field name="contacts" />
+                        </page>
+                        <page string="Notes" name="notes">
+                            <field name="note" />
+                        </page>
+                    </notebook>
+                </sheet>
             </form>
         </field>
     </record>
        
         
     <!-- ACTIONS -->
-    <record id="action_study_study_tree" model="ir.actions.act_window">
+    <record id="action_study_study" model="ir.actions.act_window">
         <field name="name">Études</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.study</field>        

@@ -4,10 +4,10 @@ from odoo import osv
 from odoo.exceptions import UserError
 
 
-class StudyParticipantState(models.Model):
-    _name = "study.participant.state"
+class StudyQuestionnaireProgressStatus(models.Model):
+    _name = "study.questionnaire.progress.status"
 
     name = fields.Char("Name")
-    sequence = fields.Integer("Sequence")
     value = fields.Char("Value")
+    sequence = fields.Integer("Sequence")
 

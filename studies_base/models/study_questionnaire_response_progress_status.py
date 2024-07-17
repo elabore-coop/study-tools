@@ -8,5 +8,6 @@ class StudyQuestionnaireResponseProgressStatus(models.Model):
     _name = "study.questionnaire.response.progress.status"
 
     name = fields.Char("Name")
+    value = fields.Char("Value")
     sequence = fields.Integer("Sequence")
 

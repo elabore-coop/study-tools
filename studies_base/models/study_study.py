@@ -7,6 +7,8 @@ from odoo.exceptions import UserError
 class StudyStudy(models.Model):
     _name = "study.study"
 
+    _inherit = ['mail.thread']
+
     title = fields.Char("Nom de l'étude")
     name = fields.Char("Acronyme")
 
@@ -24,7 +26,7 @@ class StudyStudy(models.Model):
     ppc_reference = fields.Char("Référence Comité de Protection des Personnes")
     version = fields.Char("Version")
     phase = fields.Many2one("study.phase", string="Phase")
-    status = fields.Many2one("study.status", string="Status")
+    status = fields.Many2one("study.status", string="Status de la publication")
 
     site = fields.Many2one("res.partner", string="Lieu de l'étude")
     author = fields.Many2one("study.author", string="Platforme technique d'étude")

@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <menuitem id="menu_study_main" name="Études" />        
+    <menuitem id="menu_study_main" name="Études"
+        groups="base.group_user">        
+        <menuitem id="menu_study_study" name="Études"
+            action="action_study_study" 
+            sequence="1" />
+    </menuitem>
 </odoo>

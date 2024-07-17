@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+
+        <!-- study.status -->
+    	<record id="study_status_DRAFT" model="study.status">
+            <field name="name">Brouillon</field>
+            <field name="value">DRAFT</field>
+        </record>
+
+        <record id="study_status_ACTIVE" model="study.status">
+            <field name="name">Publiée</field>
+            <field name="value">ACTIVE</field>
+        </record>
+
+        <record id="study_status_RETIRED" model="study.status">
+            <field name="name">Retirée</field>
+            <field name="value">RETIRED</field>
+        </record>
+
+        <record id="study_status_UNKNOWN" model="study.status">
+            <field name="name">Inconnu</field>
+            <field name="value">UNKNOWN</field>
+        </record>
+
+        <!-- study.participant.progress.status -->
+        <record id="study_participant_progress_status_REGISTRED" model="study.participant.progress.status">
+            <field name="name">Inscrit</field>
+            <field name="value">REGISTRED</field>
+        </record>
+
+        <record id="study_participant_progress_status_ACTIVE" model="study.participant.progress.status">
+            <field name="name">En cours</field>
+            <field name="value">ACTIVE</field>
+        </record>
+
+        <record id="study_participant_progress_status_COMPLETED" model="study.participant.progress.status">
+            <field name="name">Terminé</field>
+            <field name="value">COMPLETED</field>
+        </record>
+
+
+        <!-- study.participant.state -->
+        <record id="study_participant_state_INCLUDED" model="study.participant.state">
+            <field name="name">Inclu</field>
+            <field name="value">INCLUDED</field>
+        </record>
+
+        <record id="study_participant_state_EXCLUDED" model="study.participant.state">
+            <field name="name">Exclu</field>
+            <field name="value">EXCLUDED</field>
+        </record>
+
+        <record id="study_participant_state_UNKNOWN" model="study.participant.state">
+            <field name="name">Indéterminé</field>
+            <field name="value">UNKNOWN</field>
+        </record>
+
+        <record id="study_participant_state_WITHDRAWN" model="study.participant.state">
+            <field name="name">Retiré</field>
+            <field name="value">WITHDRAWN</field>
+        </record>
+
+
+        <!-- study.questionnaire.progress.status -->
+        <record id="study_questionnaire_progress_status_DRAFT" model="study.questionnaire.progress.status">
+            <field name="name">Brouillon</field>
+            <field name="value">DRAFT</field>
+        </record>
+
+        <record id="study_questionnaire_progress_status_VALIDATED" model="study.questionnaire.progress.status">
+            <field name="name">Validé</field>
+            <field name="value">VALIDATED</field>
+        </record>
+
+        <record id="study_questionnaire_progress_status_ACTIVE" model="study.questionnaire.progress.status">
+            <field name="name">Collecte en cours</field>
+            <field name="value">ACTIVE</field>
+        </record>
+
+        <record id="study_questionnaire_progress_status_COMPLETED" model="study.questionnaire.progress.status">
+            <field name="name">Terminée</field>
+            <field name="value">COMPLETED</field>
+        </record>
+
+        <record id="study_questionnaire_progress_status_WITHDRAWN" model="study.questionnaire.progress.status">
+            <field name="name">Annulé</field>
+            <field name="value">WITHDRAWN</field>
+        </record>
+
+
+
+
+        <!-- study.questionnaire.status -->
+        <record id="study_questionnaire_status_DRAFT" model="study.questionnaire.status">
+            <field name="name">Brouillon</field>
+            <field name="value">DRAFT</field>
+        </record>
+
+        <record id="study_questionnaire_status_ACTIVE" model="study.questionnaire.status">
+            <field name="name">Publiée</field>
+            <field name="value">ACTIVE</field>
+        </record>
+
+        <record id="study_questionnaire_status_RETIRED" model="study.questionnaire.status">
+            <field name="name">Retirée</field>
+            <field name="value">RETIRED</field>
+        </record>
+
+        <record id="study_questionnaire_status_UNKNOWN" model="study.questionnaire.status">
+            <field name="name">Inconnu</field>
+            <field name="value">UNKNOWN</field>
+        </record>
+
+
+
+
+        <!-- study.questionnaire.response.progress.status -->
+        <record id="study_questionnaire_response_progress_status_NOT-STARTED" model="study.questionnaire.response.progress.status">
+            <field name="name">Non commencé</field>
+            <field name="value">NOT-STARTED</field>
+        </record>
+
+        <record id="study_questionnaire_response_progress_status_IN-PROGRESS" model="study.questionnaire.response.progress.status">
+            <field name="name">Partiellement rempli</field>
+            <field name="value">IN-PROGRESS</field>
+        </record>
+
+        <record id="study_questionnaire_response_progress_status_COMPLETED" model="study.questionnaire.response.progress.status">
+            <field name="name">Complété</field>
+            <field name="value">COMPLETED</field>
+        </record>
+
+        <record id="study_questionnaire_response_progress_status_AMENDED" model="study.questionnaire.response.progress.status">
+            <field name="name">Modifié</field>
+            <field name="value">AMENDED</field>
+        </record>
+
+        <record id="study_questionnaire_response_progress_status_ENTERED-IN-ERROR" model="study.questionnaire.response.progress.status">
+            <field name="name">Rempli pas erreur ou annulé</field>
+            <field name="value">ENTERED-IN-ERROR</field>
+        </record>
+
+        <record id="study_questionnaire_response_progress_status_STOPPED" model="study.questionnaire.response.progress.status">
+            <field name="name">Abandonné</field>
+            <field name="value">STOPPED</field>
+        </record>
+
+        <record id="study_questionnaire_response_progress_status_CANCELED" model="study.questionnaire.response.progress.status">
+            <field name="name">Annulée</field>
+            <field name="value">CANCELED</field>
+        </record>
+
+
+
+
+
+        <!-- study.questionnaire.response.state -->
+
+        <record id="study_questionnaire_response_state_INCLUDED" model="study.questionnaire.response.state">
+            <field name="name">Inclu</field>
+            <field name="value">INCLUDED</field>
+        </record>
+
+        <record id="study_questionnaire_response_state_EXCLUDED" model="study.questionnaire.response.state">
+            <field name="name">Exclu</field>
+            <field name="value">EXCLUDED</field>
+        </record>
+
+        <record id="study_questionnaire_response_state_UNKNOWN" model="study.questionnaire.response.state">
+            <field name="name">Indéterminé</field>
+            <field name="value">UNKNOWN</field>
+        </record>
+
+        <record id="study_questionnaire_response_state_WITHDRAWN" model="study.questionnaire.response.state">
+            <field name="name">Retiré</field>
+            <field name="value">WITHDRAWN</field>
+        </record>
+
+</odoo>

@@ -14,6 +14,7 @@ from . import study_type
 from . import study_questionnaire_category
 from . import study_questionnaire_response
 from . import study_questionnaire_status
+from . import study_questionnaire_progress_status
 from . import study_questionnaire_subject_type
 from . import study_questionnaire_type
 from . import study_participant_progress_status

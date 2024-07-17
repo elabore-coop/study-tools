@@ -21,10 +21,12 @@
     },
     # always loaded
     "data": [        
-        # "security/security.xml",
-        "views/study_menu.xml",
+        # "security/security.xml",        
+        "data/studies_base_data.xml",       
+        "security/ir.model.access.csv",       
         "views/study_config_views.xml",
         "views/study_study_views.xml",
+        "views/study_menu.xml",
     ],
     # only loaded in demonstration mode
     "demo": [],

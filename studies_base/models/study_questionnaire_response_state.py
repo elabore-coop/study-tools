@@ -8,5 +8,6 @@ class StudyQuestionnaireResponseState(models.Model):
     _name = "study.questionnaire.response.state"
 
     name = fields.Char("Name")
+    value = fields.Char("Value")
     sequence = fields.Integer("Sequence")
 
