@@ -16,11 +16,11 @@ class StudyQuestionnaireResponse(models.Model):
 
     author = fields.Many2one("study.author", string="Platform d'étude", readonly=True)
     identifier_author = fields.Char("ID plateforme", readonly=True)
-    redirect_url = fields.Char("Lien personnel de redirection vers le questionnaire")
+    redirect_url = fields.Char("Lien personnel de redirection vers le questionnaire", readonly=True)
 
-    study_id = fields.Many2one("study.study", "Étude")
-    study_questionnaire_id = fields.Many2one("study.questionnaire", string="Questionnaire")
-    study_participant_id = fields.Many2one("study.participant", string="Participation")
+    study_id = fields.Many2one("study.study", "Étude", readonly=True)
+    study_questionnaire_id = fields.Many2one("study.questionnaire", string="Questionnaire", readonly=True)
+    study_participant_id = fields.Many2one("study.participant", string="Participation", readonly=True)
     
     source = fields.Many2one("res.partner", string="Contact", domain=[("category_patient",'=',1)], readonly=True)
     firstname = fields.Char("Prénom", related="source.firstname")

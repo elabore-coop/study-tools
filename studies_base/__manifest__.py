@@ -26,6 +26,10 @@
         "security/ir.model.access.csv",       
         "views/study_config_views.xml",
         "views/study_study_views.xml",
+        "views/study_progress_status_views.xml",
+        "views/study_questionnaire_views.xml",
+        "views/study_questionnaire_response_views.xml",
+        "views/study_participant_views.xml",
         "views/study_menu.xml",
     ],
     # only loaded in demonstration mode

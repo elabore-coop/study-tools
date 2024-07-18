@@ -313,7 +313,7 @@
     
     
     <!-- MENUS -->
-    <menuitem id="menu_study_config" name="Configuration" parent="menu_study_main" sequence="2">
+    <menuitem id="menu_study_config" name="Configuration" parent="menu_study_main" sequence="999">
         <menuitem id="menu_study_study_config" name="Études">
             <menuitem id="menu_study_author"
                 action="action_study_author"

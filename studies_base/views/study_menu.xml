@@ -5,5 +5,17 @@
         <menuitem id="menu_study_study" name="Études"
             action="action_study_study" 
             sequence="1" />
+        <menuitem id="menu_study_progress_status" name="Statuts d'avancement des études"
+            action="action_study_progress_status" 
+            sequence="1" />            
+        <menuitem id="menu_study_questionnaire" name="Questionnaires"
+            action="action_study_questionnaire" 
+            sequence="2" />
+        <menuitem id="menu_study_participant" name="Participants"
+            action="action_study_participant" 
+            sequence="3" />
+        <menuitem id="menu_study_questionnaire_response" name="Réponses aux questionnaires"
+            action="action_study_questionnaire_response" 
+            sequence="4" />
     </menuitem>
 </odoo>

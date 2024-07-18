@@ -1,18 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <!-- TREE VIEW -->
-    <record id="view_stud_study_tree" model="ir.ui.view">
+    <record id="view_study_study_tree" model="ir.ui.view">
         <field name="name">study.study.tree</field>
         <field name="model">study.study</field>        
         <field name="arch" type="xml">
             <tree string="Études">                
-                <field name="name"/>                
+                <field name="title"/>            
+                <field name="name"/>            
+                <field name="period_start"/>            
+                <field name="period_end"/>            
+                <field name="progress_status"/>                
             </tree>
         </field>
     </record>
 
     <!-- FORM VIEW -->
-    <record id="view_stud_study_form" model="ir.ui.view">
+    <record id="view_study_study_form" model="ir.ui.view">
         <field name="name">study.study.form</field>
         <field name="model">study.study</field>        
         <field name="arch" type="xml">

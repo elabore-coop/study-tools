@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- TREE VIEW -->
+    <record id="view_study_questionnaire_tree" model="ir.ui.view">
+        <field name="name">study.questionnaire.tree</field>
+        <field name="model">study.questionnaire</field>        
+        <field name="arch" type="xml">
+            <tree string="Questionnaires">                
+                <field name="title"/>            
+                <field name="name"/>            
+                <field name="effective_period_start"/>            
+                <field name="effective_period_end"/>            
+                <field name="study_id"/>                
+            </tree>
+        </field>
+    </record>
+
+    <!-- FORM VIEW -->
+    <record id="view_study_questionnaire_form" model="ir.ui.view">
+        <field name="name">study.questionnaire.form</field>
+        <field name="model">study.questionnaire</field>        
+        <field name="arch" type="xml">
+            <form string="Questionnaires">
+                <header>
+                    <!-- action buttons -->
+                </header>
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <!-- big buttons -->
+                    </div>
+                
+                    <div class="oe_title">
+                        <h1>
+                            <label for="title" string="Nom du questionnaire" /><field name="title" />
+                        </h1>
+                        <h2>
+                            <label for="name" string="Acronyme" /><field name="name" />
+                        </h2>
+                    </div>
+                    <group name="status" string="Statut">
+                        <group name="status_left">
+                            <field name="progress_status" />
+                            <field name="approval_date" />
+                            <field name="last_review_date" />
+                        </group>
+                        <group name="status_right">
+                            <field name="effective_period_start" />
+                            <field name="effective_period_end" />
+                        </group>
+                    </group>
+                    <group name="description" string="Description">
+                        <group name="description_left">
+                            <field name="study_id" />
+                            <field name="category" />
+                            <field name="type" />
+                            <field name="purpose" />
+                            <field name="subject_type" />                            
+                        </group>
+                        <group name="description_right">
+                            <field name="description" />
+                            <field name="jurisdiction"  widget="many2many_tags" />
+                            <field name="derived_from" />
+                            <field name="version" />
+                            <field name="status" />
+                        </group>
+                    </group>
+                    <group name="technique" string="Technique">
+                        <group name="technique_left">
+                            <field name="experimental" />
+                            <field name="author" />
+                            <field name="identifier_author" />
+                        </group>
+                        <group name="technique_right">
+                            <field name="identifier_primary_id" />
+                            <field name="create_date" />
+                            <field name="write_date" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Planification" name="planification">
+                            <group name="planification">
+                                <group name="planification_left">
+                                    <field name="rank_in_study" />                                    
+                                    <field name="fixed_start_date" />
+                                    <field name="fixed_end_date" />
+                                    <field name="repeated" />
+                                    <field name="repeat_delay" />
+                                    <field name="repeat_delay_type" />
+                                </group>
+                                <group name="planification_right">
+                                    <field name="following" />
+                                    <field name="following_delay" />
+                                    <field name="following_delay_type" />
+                                    <field name="preceding" />
+                                    <field name="preceding_delay" />
+                                    <field name="preceding_delay_type" />
+                                </group>
+                            </group>
+                        </page>
+                        <page string="Copyright" name="copyright">
+                            <group name="copyright">
+                                <field name="copyright" />
+                                <field name="copyright_label" />
+                            </group>
+                        </page>                        
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+       
+        
+    <!-- ACTIONS -->
+    <record id="action_study_questionnaire" model="ir.actions.act_window">
+        <field name="name">Questionnaires</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">study.questionnaire</field>        
+    </record>
+        
+</odoo>

@@ -7,6 +7,8 @@ from odoo.exceptions import UserError
 class StudyProgressStatus(models.Model):
     _name = "study.progress.status"
 
+    _rec_name = 'state'
+
     study_id = fields.Many2one("study.study", string="Étude")
     state = fields.Selection([
         ('DRAFT', 'Brouillon'), 
