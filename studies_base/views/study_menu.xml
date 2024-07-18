@@ -17,5 +17,79 @@
         <menuitem id="menu_study_questionnaire_response" name="Réponses aux questionnaires"
             action="action_study_questionnaire_response" 
             sequence="4" />
+
+
+        <menuitem id="menu_study_config" name="Configuration" sequence="999">
+            <menuitem id="menu_study_study_config" name="Études">
+                <menuitem id="menu_study_author"
+                    action="action_study_author"
+                    sequence="1" />
+                <menuitem id="menu_study_eligibility_condition_body_site"
+                    action="action_study_eligibility_condition_body_site"
+                    sequence="2"/>
+                <menuitem id="menu_study_eligibility_condition_clinical_status"
+                    action="action_study_eligibility_condition_clinical_status"
+                    sequence="3"/>
+                <menuitem id="menu_study_eligibility_topic"
+                    action="action_study_eligibility_topic"
+                    sequence="4"/>
+                <menuitem id="menu_study_gender"
+                    action="action_study_gender"
+                    sequence="5"/>
+                <menuitem id="menu_study_phase"
+                    action="action_study_phase"
+                    sequence="7"/>
+                <menuitem id="menu_study_purpose_type"
+                    action="action_study_purpose_type"
+                    sequence="8"/>
+                <menuitem id="menu_study_region"
+                    action="action_study_region"
+                    sequence="14"/>
+                <menuitem id="menu_study_status"
+                    action="action_study_status"
+                    sequence="15"/>
+                <menuitem id="menu_study_tag"
+                    action="action_study_tag"
+                    sequence="16"/>
+                <menuitem id="menu_study_type"
+                    action="action_study_type"
+                    sequence="17"/>
+            </menuitem>
+            <menuitem id="menu_study_participant_config" name="Participants">
+                <menuitem id="menu_study_participant_state"
+                    action="action_study_participant_state"
+                    sequence="6"/>
+                <menuitem id="menu_study_participant_progress_status"
+                    action="action_study_participant_progress_status"
+                    sequence="6"/>
+            </menuitem>
+            <menuitem id="menu_study_questionnaire_config" name="Questionnaires">
+                <menuitem id="menu_study_questionnaire_category"
+                    action="action_study_questionnaire_category"
+                    sequence="9"/>
+                <menuitem id="menu_study_questionnaire_progress_status"
+                    action="action_study_questionnaire_progress_status"
+                    sequence="10"/>
+                <menuitem id="menu_study_questionnaire_status"
+                    action="action_study_questionnaire_status"
+                    sequence="11"/>
+                <menuitem id="menu_study_questionnaire_subject_type"
+                    action="action_study_questionnaire_subject_type"
+                    sequence="12"/>
+                <menuitem id="menu_study_questionnaire_type"
+                    action="action_study_questionnaire_type"
+                    sequence="13"/>
+            </menuitem>
+            <menuitem id="menu_study_questionnaire_response_config" name="Réponses aux questionnaires">
+                <menuitem id="menu_study_questionnaire_response_state"
+                    action="action_study_questionnaire_response_state"
+                    sequence="10"/>
+                <menuitem id="menu_study_questionnaire_response_progress_status"
+                    action="action_study_questionnaire_response_progress_status"
+                    sequence="10"/>
+            </menuitem>
+            
+        
+        </menuitem>
     </menuitem>
 </odoo>
