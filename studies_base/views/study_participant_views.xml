@@ -19,7 +19,7 @@
         <field name="name">study.participant.form</field>
         <field name="model">study.participant</field>        
         <field name="arch" type="xml">
-            <form string="Étude">
+            <form string="Participant">
                 <header>
                     <!-- action buttons -->
                 </header>
@@ -51,12 +51,10 @@
                             <field name="progress_status" />
                             <field name="state" />
                         </group>
-                        <group name="participation_right">
-                            <field name="part_of_author" />
-                            <field name="author" />
+                        <group name="participation_right">                            
                             <field name="identifier" />
                         </group>
-                    </group>
+                    </group>                    
                     <group name="technique" string="Technique">
                         <group name="technique_left">
                             <field name="create_date" />
@@ -65,11 +63,7 @@
                         <group name="technique_right">
                         </group>
                     </group>
-                    <notebook>
-                        <page string="Réponses" name="responses">
-                            <field name="questionnaire_responses" />
-                        </page>
-                    </notebook>
+                    
                 </sheet>
             </form>
         </field>

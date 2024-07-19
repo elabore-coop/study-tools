@@ -15,9 +15,7 @@ class StudyParticipant(models.Model):
     lastname = fields.Char("Nom", related="subject.lastname")
     progress_status = fields.Many2one("study.participant.progress.status", string="Statut de la participation", readonly=True)
     state = fields.Many2one("study.participant.state", string="État de la participation", readonly=True)
-
-    part_of_author = fields.Many2one("study.author", string="Platforme d'étude", related="part_of.author")
-    author = fields.Char("ID plateforme", readonly=True)
+        
     identifier = fields.Char("Idientifiants de l'enrôlement", readonly=True)
 
-    questionnaire_responses = fields.One2many("study.questionnaire.response", "study_participant_id", string="Réponses")
+    

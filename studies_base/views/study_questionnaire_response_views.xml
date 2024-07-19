@@ -6,8 +6,6 @@
         <field name="model">study.questionnaire.response</field>        
         <field name="arch" type="xml">
             <tree string="Réponses aux questionnaires">                
-                <field name="start_date"/>            
-                <field name="end_date"/>            
                 <field name="study_id"/>            
                 <field name="study_questionnaire_id"/>            
                 <field name="firstname"/>                
@@ -21,7 +19,7 @@
         <field name="name">study.questionnaire.response.response.form</field>
         <field name="model">study.questionnaire.response</field>        
         <field name="arch" type="xml">
-            <form string="Réponses aux questionnaires">
+            <form string="Réponse aux questionnaires">
                 <header>
                     <!-- action buttons -->
                 </header>
@@ -37,23 +35,17 @@
                     </div>
                     <group name="collecte" string="Collecte">
                         <group name="collecte_left">
-                            <field name="start_date" />
-                            <field name="end_date" />
-                            <field name="state" />
                             <field name="progress_status" />
                             <field name="authored" />
                         </group>
-                        <group name="collecte_right">
-                            <field name="author" />
+                        <group name="collecte_right">                            
                             <field name="identifier_author" />
-                            <field name="redirect_url" />
                         </group>
                     </group>
                     <group name="study" string="Étude">
                         <group name="study_left">
                             <field name="study_id" />
                             <field name="study_questionnaire_id" />
-                            <field name="study_participant_id" />
                         </group>
                         <group name="study_right">
                         </group>

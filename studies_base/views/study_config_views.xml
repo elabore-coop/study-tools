@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <!-- VIEWS -->
-    <record id="view_study_author_tree" model="ir.ui.view">
-        <field name="name">study.author.tree</field>
-        <field name="model">study.author</field>        
-        <field name="arch" type="xml">
-            <tree string="Platformes techniques d'étude" editable="bottom">
-                <field name="sequence" widget="handle"/>
-                <field name="name"/>                
-            </tree>
-        </field>
-    </record>
+    
     <record id="view_study_eligibility_condition_body_site_tree" model="ir.ui.view">
         <field name="name">study.eligibility.condition.body.site.tree</field>
         <field name="model">study.eligibility.condition.body.site</field>        
@@ -18,6 +9,7 @@
             <tree string="Localisations anatomiques des affections" editable="bottom">
                 <field name="sequence" widget="handle"/>
                 <field name="name"/>                
+                <field name="value" />
             </tree>
         </field>
     </record>
@@ -27,7 +19,8 @@
         <field name="arch" type="xml">
             <tree string="Statuts des affectations (malade, ancien malade...)" editable="bottom">
                 <field name="sequence" widget="handle"/>
-                <field name="name"/>                
+                <field name="name"/>         
+                <field name="value" />       
             </tree>
         </field>
     </record>
@@ -37,7 +30,8 @@
         <field name="arch" type="xml">
             <tree string="Thématiques de recherche" editable="bottom">
                 <field name="sequence" widget="handle"/>
-                <field name="name"/>                
+                <field name="name"/>     
+                <field name="value" />           
             </tree>
         </field>
     </record>
@@ -47,7 +41,8 @@
         <field name="arch" type="xml">
             <tree string="Genres" editable="bottom">
                 <field name="sequence" widget="handle"/>
-                <field name="name"/>                
+                <field name="name"/>     
+                <field name="value" />           
             </tree>
         </field>
     </record>
@@ -79,7 +74,8 @@
         <field name="arch" type="xml">
             <tree string="Phases" editable="bottom">
                 <field name="sequence" widget="handle"/>
-                <field name="name"/>                
+                <field name="name"/>  
+                <field name="value" />              
             </tree>
         </field>
     </record>
@@ -89,28 +85,8 @@
         <field name="arch" type="xml">
             <tree string="Objectifs" editable="bottom">
                 <field name="sequence" widget="handle"/>
-                <field name="name"/>                
-            </tree>
-        </field>
-    </record>
-    <record id="view_study_questionnaire_category_tree" model="ir.ui.view">
-        <field name="name">study.questionnaire.category.tree</field>
-        <field name="model">study.questionnaire.category</field>        
-        <field name="arch" type="xml">
-            <tree string="Catégories de questionnaire" editable="bottom">
-                <field name="sequence" widget="handle"/>
-                <field name="name"/>                
-            </tree>
-        </field>
-    </record>
-    <record id="view_study_questionnaire_response_state_tree" model="ir.ui.view">
-        <field name="name">study.questionnaire.response.state.tree</field>
-        <field name="model">study.questionnaire.response.state</field>        
-        <field name="arch" type="xml">
-            <tree string="États des réponses" editable="bottom">
-                <field name="sequence" widget="handle"/>
-                <field name="name"/>    
-                <field name="value" />            
+                <field name="name"/>      
+                <field name="value" />          
             </tree>
         </field>
     </record>
@@ -119,17 +95,6 @@
         <field name="model">study.questionnaire.response.progress.status</field>        
         <field name="arch" type="xml">
             <tree string="Statuts des réponses aux questionnaires" editable="bottom">
-                <field name="sequence" widget="handle"/>
-                <field name="name"/>                
-                <field name="value" />
-            </tree>
-        </field>
-    </record>
-    <record id="view_study_questionnaire_progress_status_tree" model="ir.ui.view">
-        <field name="name">study.questionnaire.progress.status.tree</field>
-        <field name="model">study.questionnaire.progress.status</field>        
-        <field name="arch" type="xml">
-            <tree string="Statuts des questionnaires" editable="bottom">
                 <field name="sequence" widget="handle"/>
                 <field name="name"/>                
                 <field name="value" />
@@ -153,20 +118,11 @@
         <field name="arch" type="xml">
             <tree string="Sujets" editable="bottom">
                 <field name="sequence" widget="handle"/>
-                <field name="name"/>                
+                <field name="name"/>         
+                <field name="value" />       
             </tree>
         </field>
-    </record>
-    <record id="view_study_questionnaire_type_tree" model="ir.ui.view">
-        <field name="name">study.questionnaire.type.tree</field>
-        <field name="model">study.questionnaire.type</field>        
-        <field name="arch" type="xml">
-            <tree string="Types de questionnaire" editable="bottom">
-                <field name="sequence" widget="handle"/>
-                <field name="name"/>                
-            </tree>
-        </field>
-    </record>
+    </record>    
     <record id="view_study_region_tree" model="ir.ui.view">
         <field name="name">study.region.tree</field>
         <field name="model">study.region</field>        
@@ -188,21 +144,11 @@
             </tree>
         </field>
     </record>
-    <record id="view_study_tag_tree" model="ir.ui.view">
-        <field name="name">study.tag.tree</field>
-        <field name="model">study.tag</field>        
+    <record id="view_study_keyword_tree" model="ir.ui.view">
+        <field name="name">study.keyword.tree</field>
+        <field name="model">study.keyword</field>        
         <field name="arch" type="xml">
             <tree string="Mots-clés des études" editable="bottom">                
-                <field name="name"/>                
-            </tree>
-        </field>
-    </record>
-    <record id="view_study_type_tree" model="ir.ui.view">
-        <field name="name">study.type.tree</field>
-        <field name="model">study.type</field>        
-        <field name="arch" type="xml">
-            <tree string="Types d'études" editable="bottom">
-                <field name="sequence" widget="handle"/>
                 <field name="name"/>                
             </tree>
         </field>
@@ -210,11 +156,7 @@
     
 
     <!-- ACTIONS -->
-    <record id="action_study_author" model="ir.actions.act_window">
-        <field name="name">Platformes techniques d'étude</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">study.author</field>        
-    </record>
+    
     <record id="action_study_eligibility_condition_body_site" model="ir.actions.act_window">
         <field name="name">Localisations anatomiques des affections</field>
         <field name="type">ir.actions.act_window</field>
@@ -254,27 +196,12 @@
         <field name="name">Objectifs</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.purpose.type</field>        
-    </record>
-    <record id="action_study_questionnaire_category" model="ir.actions.act_window">
-        <field name="name">Catégories de questionnaire</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">study.questionnaire.category</field>        
-    </record>
-    <record id="action_study_questionnaire_response_state" model="ir.actions.act_window">
-        <field name="name">États des réponses</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">study.questionnaire.response.state</field>        
-    </record>
+    </record>    
     <record id="action_study_questionnaire_response_progress_status" model="ir.actions.act_window">
         <field name="name">Statuts des réponses aux questionnaires</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.questionnaire.response.progress.status</field>        
-    </record>
-    <record id="action_study_questionnaire_progress_status" model="ir.actions.act_window">
-        <field name="name">Statuts des questionnaires</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">study.questionnaire.progress.status</field>        
-    </record>
+    </record>    
     <record id="action_study_questionnaire_status" model="ir.actions.act_window">
         <field name="name">Statuts de publication (questionnaires)</field>
         <field name="type">ir.actions.act_window</field>
@@ -284,11 +211,6 @@
         <field name="name">Types de sujet des questionnaires</field>
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.questionnaire.subject.type</field>        
-    </record>
-    <record id="action_study_questionnaire_type" model="ir.actions.act_window">
-        <field name="name">Types de questionnaires</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">study.questionnaire.type</field>        
     </record>
     <record id="action_study_region" model="ir.actions.act_window">
         <field name="name">Zones géographiques étudiées</field>
@@ -300,16 +222,9 @@
         <field name="type">ir.actions.act_window</field>
         <field name="res_model">study.status</field>        
     </record>
-    <record id="action_study_tag" model="ir.actions.act_window">
+    <record id="action_study_keyword" model="ir.actions.act_window">
         <field name="name">Mots-clés des études</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">study.tag</field>        
+        <field name="res_model">study.keyword</field>        
     </record>
-    <record id="action_study_type" model="ir.actions.act_window">
-        <field name="name">Types d'études</field>
-        <field name="type">ir.actions.act_window</field>
-        <field name="res_model">study.type</field>        
-    </record>
-    
-    
 </odoo>

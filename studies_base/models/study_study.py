@@ -5,9 +5,8 @@ from odoo.exceptions import UserError
 
 
 class StudyStudy(models.Model):
-    _name = "study.study"
 
-    _inherit = ['mail.thread']
+    _name = "study.study"
 
     title = fields.Char("Nom de l'étude")
     name = fields.Char("Acronyme")
@@ -17,19 +16,16 @@ class StudyStudy(models.Model):
     progress_status = fields.Many2one("study.progress.status", string="Avancement de l'étude")
 
 
-    type = fields.Many2one("study.type", string="Type")
     description_summary = fields.Char("Brève description de l'étude")
     description = fields.Text("Description de l'étude")
-    keyword = fields.Many2one("study.tag", string="Mots-clés")
+    keyword = fields.Many2one("study.keyword", string="Mots-clés")
     primary_purpose_type = fields.Many2one("study.purpose.type", string="Objectif principal")
     part_of = fields.Many2one("study.study", string="Fait partie de")
-    ppc_reference = fields.Char("Référence Comité de Protection des Personnes")
     version = fields.Char("Version")
     phase = fields.Many2one("study.phase", string="Phase")
     status = fields.Many2one("study.status", string="Status de la publication")
 
     site = fields.Many2one("res.partner", string="Lieu de l'étude")
-    author = fields.Many2one("study.author", string="Platforme technique d'étude")
     identitifer_author = fields.Char("ID plateforme")
 
     identifier_primary_id  = fields.Char("Idientifiant Seintinelles", readonly=True)
@@ -54,8 +50,6 @@ class StudyStudy(models.Model):
     recruitment_eligibility_description = fields.Text("Description de la cible")
     recruitment_eligibility_topic = fields.Many2many("study.eligibility.topic", string="Thématique de recherche")
     region = fields.Many2many("study.region", string="Zones géographiques étudiées")
-
-    questionnaires = fields.One2many("study.questionnaire", "study_id", string="Questionnaires")
-    contacts = fields.Many2many("res.partner", string="Contacts")
+    
 
     note = fields.Text("Annotations")

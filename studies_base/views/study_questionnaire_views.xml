@@ -9,8 +9,7 @@
                 <field name="title"/>            
                 <field name="name"/>            
                 <field name="effective_period_start"/>            
-                <field name="effective_period_end"/>            
-                <field name="study_id"/>                
+                <field name="effective_period_end"/>                            
             </tree>
         </field>
     </record>
@@ -20,7 +19,7 @@
         <field name="name">study.questionnaire.form</field>
         <field name="model">study.questionnaire</field>        
         <field name="arch" type="xml">
-            <form string="Questionnaires">
+            <form string="Questionnaire">
                 <header>
                     <!-- action buttons -->
                 </header>
@@ -39,7 +38,6 @@
                     </div>
                     <group name="status" string="Statut">
                         <group name="status_left">
-                            <field name="progress_status" />
                             <field name="approval_date" />
                             <field name="last_review_date" />
                         </group>
@@ -50,9 +48,6 @@
                     </group>
                     <group name="description" string="Description">
                         <group name="description_left">
-                            <field name="study_id" />
-                            <field name="category" />
-                            <field name="type" />
                             <field name="purpose" />
                             <field name="subject_type" />                            
                         </group>
@@ -67,7 +62,6 @@
                     <group name="technique" string="Technique">
                         <group name="technique_left">
                             <field name="experimental" />
-                            <field name="author" />
                             <field name="identifier_author" />
                         </group>
                         <group name="technique_right">
@@ -76,27 +70,7 @@
                             <field name="write_date" />
                         </group>
                     </group>
-                    <notebook>
-                        <page string="Planification" name="planification">
-                            <group name="planification">
-                                <group name="planification_left">
-                                    <field name="rank_in_study" />                                    
-                                    <field name="fixed_start_date" />
-                                    <field name="fixed_end_date" />
-                                    <field name="repeated" />
-                                    <field name="repeat_delay" />
-                                    <field name="repeat_delay_type" />
-                                </group>
-                                <group name="planification_right">
-                                    <field name="following" />
-                                    <field name="following_delay" />
-                                    <field name="following_delay_type" />
-                                    <field name="preceding" />
-                                    <field name="preceding_delay" />
-                                    <field name="preceding_delay_type" />
-                                </group>
-                            </group>
-                        </page>
+                    <notebook>                        
                         <page string="Copyright" name="copyright">
                             <group name="copyright">
                                 <field name="copyright" />

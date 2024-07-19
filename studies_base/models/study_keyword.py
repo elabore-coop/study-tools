@@ -4,9 +4,7 @@ from odoo import osv
 from odoo.exceptions import UserError
 
 
-class StudyAuthor(models.Model):
-    _name = "study.author"
+class StudyKeyword(models.Model):
+    _name = "study.keyword"
 
     name = fields.Char("Name")
-    sequence = fields.Integer("Sequence")
-

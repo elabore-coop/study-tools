@@ -48,16 +48,14 @@
                         </group>
                     </group>
                     <group name="description" string="Description">
-                        <group name="description_left">
-                            <field name="type" />
-                            <field name="description_summary" />
+                        <group name="description_left">  
+                            <field name="description_summary" />                          
                             <field name="description" />
                             <field name="keyword" />
-                            <field name="primary_purpose_type" />                            
                         </group>
                         <group name="description_right">
-                            <field name="part_of" />
-                            <field name="ppc_reference" />
+                            <field name="primary_purpose_type" />     
+                            <field name="part_of" />                            
                             <field name="version" />
                             <field name="phase" />
                             <field name="status" />
@@ -65,8 +63,7 @@
                     </group>
                     <group name="technique" string="Technique">
                         <group name="technique_left">
-                            <field name="site" />
-                            <field name="author" />
+                            <field name="site" />                            
                             <field name="identitifer_author" />
                         </group>
                         <group name="technique_right">
@@ -95,13 +92,7 @@
                                     <field name="region" widget="many2many_tags" />
                                 </group>
                             </group>
-                        </page>
-                        <page string="Questionnaires" name="questionnaires">
-                            <field name="questionnaires" />
-                        </page>
-                        <page string="Contacts / Chercheurs" name="contacts">
-                            <field name="contacts" />
-                        </page>
+                        </page>                                                
                         <page string="Notes" name="notes">
                             <field name="note" />
                         </page>

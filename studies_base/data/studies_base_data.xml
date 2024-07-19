@@ -62,34 +62,6 @@
         </record>
 
 
-        <!-- study.questionnaire.progress.status -->
-        <record id="study_questionnaire_progress_status_DRAFT" model="study.questionnaire.progress.status">
-            <field name="name">Brouillon</field>
-            <field name="value">DRAFT</field>
-        </record>
-
-        <record id="study_questionnaire_progress_status_VALIDATED" model="study.questionnaire.progress.status">
-            <field name="name">Validé</field>
-            <field name="value">VALIDATED</field>
-        </record>
-
-        <record id="study_questionnaire_progress_status_ACTIVE" model="study.questionnaire.progress.status">
-            <field name="name">Collecte en cours</field>
-            <field name="value">ACTIVE</field>
-        </record>
-
-        <record id="study_questionnaire_progress_status_COMPLETED" model="study.questionnaire.progress.status">
-            <field name="name">Terminée</field>
-            <field name="value">COMPLETED</field>
-        </record>
-
-        <record id="study_questionnaire_progress_status_WITHDRAWN" model="study.questionnaire.progress.status">
-            <field name="name">Annulé</field>
-            <field name="value">WITHDRAWN</field>
-        </record>
-
-
-
 
         <!-- study.questionnaire.status -->
         <record id="study_questionnaire_status_DRAFT" model="study.questionnaire.status">
@@ -111,9 +83,6 @@
             <field name="name">Inconnu</field>
             <field name="value">UNKNOWN</field>
         </record>
-
-
-
 
         <!-- study.questionnaire.response.progress.status -->
         <record id="study_questionnaire_response_progress_status_NOT-STARTED" model="study.questionnaire.response.progress.status">
@@ -152,29 +121,81 @@
         </record>
 
 
+        
 
 
-
-        <!-- study.questionnaire.response.state -->
-
-        <record id="study_questionnaire_response_state_INCLUDED" model="study.questionnaire.response.state">
-            <field name="name">Inclu</field>
-            <field name="value">INCLUDED</field>
+        <!-- study.questionnaire.subject.type -->
+        <record id="study_questionnaire_subject_type_PATIENT" model="study.questionnaire.subject.type">
+            <field name="name">Patient</field>
+            <field name="value">PATIENT</field>
         </record>
 
-        <record id="study_questionnaire_response_state_EXCLUDED" model="study.questionnaire.response.state">
-            <field name="name">Exclu</field>
-            <field name="value">EXCLUDED</field>
+        <record id="study_questionnaire_subject_type_PRACTITIONER" model="study.questionnaire.subject.type">
+            <field name="name">Praticient</field>
+            <field name="value">PRACTITIONER</field>
         </record>
 
-        <record id="study_questionnaire_response_state_UNKNOWN" model="study.questionnaire.response.state">
-            <field name="name">Indéterminé</field>
-            <field name="value">UNKNOWN</field>
+
+        <!-- study.purpose.type -->
+        <record id="study_purpose_type_treatment" model="study.purpose.type">
+            <field name="name">Le traitement</field>
+            <field name="value">TREATMENT</field>
+        </record>
+        <record id="study_purpose_type_prevention" model="study.purpose.type">
+            <field name="name">La prévention</field>
+            <field name="value">PREVENTION</field>
+        </record>
+        <record id="study_purpose_type_diagnostic" model="study.purpose.type">
+            <field name="name">Diagnostic</field>
+            <field name="value">DIAGNOSTIC</field>
+        </record>
+        <record id="study_purpose_type_supportive_care" model="study.purpose.type">
+            <field name="name">Soins de soutien</field>
+            <field name="value">SUPPORTIVE CARE</field>
+        </record>
+        <record id="study_purpose_type_screening" model="study.purpose.type">
+            <field name="name">Dépistage</field>
+            <field name="value">SCREENING</field>
+        </record>
+        <record id="study_purpose_type_health_services_research" model="study.purpose.type">
+            <field name="name">Recherche sur les services de santé</field>
+            <field name="value">HEALTH SERVICES RESEARCH</field>
+        </record>
+        <record id="study_purpose_type_basic_science" model="study.purpose.type">
+            <field name="name">Science fondamentale</field>
+            <field name="value">BASIC SCIENCE</field>
+        </record>
+        <record id="study_purpose_type_device_feasibility" model="study.purpose.type">
+            <field name="name">Faisabilité des dispositifs</field>
+            <field name="value">DEVICE FEASIBILITY</field>
         </record>
 
-        <record id="study_questionnaire_response_state_WITHDRAWN" model="study.questionnaire.response.state">
-            <field name="name">Retiré</field>
-            <field name="value">WITHDRAWN</field>
+        <!-- study.gender -->
+        <record id="study_gender_female" model="study.gender">
+            <field name="name">Femme</field>
+            <field name="value">FEMALE</field>
+        </record>
+        <record id="study_gender_male" model="study.gender">
+            <field name="name">Homme</field>
+            <field name="value">MALE</field>
+        </record>
+        <record id="study_gender_all" model="study.gender">
+            <field name="name">Indiférent</field>
+            <field name="value">ALL</field>
+        </record>
+
+        <!-- study.eligibility.condition.clinical.status -->
+        <record id="study_eligibility_condition_clinical_status_active" model="study.eligibility.condition.clinical.status">
+            <field name="name">Malade</field>
+            <field name="value">ACTIVE</field>
+        </record>
+        <record id="study_eligibility_condition_clinical_status_inactive" model="study.eligibility.condition.clinical.status">
+            <field name="name">Ancien malade</field>
+            <field name="value">INACTIVE</field>
+        </record>
+        <record id="study_eligibility_condition_clinical_status_unknow" model="study.eligibility.condition.clinical.status">
+            <field name="name">Non malade</field>
+            <field name="value">UNKNOW</field>
         </record>
 
 </odoo>

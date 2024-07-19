@@ -1,5 +1,4 @@
 id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-access_study_author_admin,study.author.admin,model_study_author,base.group_user,1,1,1,1
 access_study_eligibility_topic_admin,study.eligibility.topic.admin,model_study_eligibility_topic,base.group_user,1,1,1,1
 access_study_eligibility_condition_body_site_admin,study.eligibility.condition.body.site.admin,model_study_eligibility_condition_body_site,base.group_user,1,1,1,1
 access_study_eligibility_condition_clinical_status_admin,study.eligibility.condition.clinical.status.admin,model_study_eligibility_condition_clinical_status,base.group_user,1,1,1,1
@@ -13,14 +12,9 @@ access_study_questionnaire_admin,study.questionnaire.admin,model_study_questionn
 access_study_region_admin,study.region.admin,model_study_region,base.group_user,1,1,1,1
 access_study_status_admin,study.status.admin,model_study_status,base.group_user,1,1,1,1
 access_study_study_admin,study.study.admin,model_study_study,base.group_user,1,1,1,1
-access_study_tag_admin,study.tag.admin,model_study_tag,base.group_user,1,1,1,1
-access_study_type_admin,study.type.admin,model_study_type,base.group_user,1,1,1,1
-access_study_questionnaire_category_admin,study.questionnaire.category.admin,model_study_questionnaire_category,base.group_user,1,1,1,1
-access_study_questionnaire_type_admin,study.questionnaire.type.admin,model_study_questionnaire_type,base.group_user,1,1,1,1
+access_study_keyword_admin,study.keyword.admin,model_study_keyword,base.group_user,1,1,1,1
 access_study_questionnaire_subject_type_admin,study.questionnaire.subject.type.admin,model_study_questionnaire_subject_type,base.group_user,1,1,1,1
 access_study_questionnaire_status_admin,study.questionnaire.status.admin,model_study_questionnaire_status,base.group_user,1,1,1,1
 access_study_participant_progress_status_admin,study.participant.progress.status.admin,model_study_participant_progress_status,base.group_user,1,1,1,1
 access_study_participant_state_admin,study.participant.state.admin,model_study_participant_state,base.group_user,1,1,1,1
-access_study_questionnaire_progress_status_admin,study.questionnaire.progress.status.admin,model_study_questionnaire_progress_status,base.group_user,1,1,1,1
-access_study_questionnaire_response_state_admin,study.questionnaire.response.state.admin,model_study_questionnaire_response_state,base.group_user,1,1,1,1
 access_study_questionnaire_response_progress_status_admin,study.questionnaire.response.progress.status.admin,model_study_questionnaire_response_progress_status,base.group_user,1,1,1,1

@@ -9,4 +9,5 @@ class StudyEligibilityTopic(models.Model):
 
     name = fields.Char("Name")
     sequence = fields.Integer("Sequence")
+    value = fields.Char("Value")
 

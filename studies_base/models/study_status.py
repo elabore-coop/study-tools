@@ -4,7 +4,7 @@ from odoo import osv
 from odoo.exceptions import UserError
 
 
-class StudStatus(models.Model):
+class StudyStatus(models.Model):
     _name = "study.status"
 
     name = fields.Char("Name")
