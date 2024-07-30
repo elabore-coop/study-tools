@@ -18,3 +18,4 @@ access_study_questionnaire_status_admin,study.questionnaire.status.admin,model_s
 access_study_participant_progress_status_admin,study.participant.progress.status.admin,model_study_participant_progress_status,base.group_user,1,1,1,1
 access_study_participant_state_admin,study.participant.state.admin,model_study_participant_state,base.group_user,1,1,1,1
 access_study_questionnaire_response_progress_status_admin,study.questionnaire.response.progress.status.admin,model_study_questionnaire_response_progress_status,base.group_user,1,1,1,1
+access_study_author_admin,study.author.admin,model_study_author,base.group_user,1,1,1,1

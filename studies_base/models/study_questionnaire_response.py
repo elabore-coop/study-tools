@@ -12,6 +12,7 @@ class StudyQuestionnaireResponse(models.Model):
     authored = fields.Datetime("Date de saisie des réponses", readonly=True)
     
     identifier_author = fields.Char("ID plateforme", readonly=True)
+    author = fields.Many2one("study.author", string="Platform d'étude", readonly=True)
 
     study_id = fields.Many2one("study.study", "Étude", readonly=True)
     study_questionnaire_id = fields.Many2one("study.questionnaire", string="Questionnaire", readonly=True)
