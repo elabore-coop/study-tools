@@ -20,7 +20,11 @@
 
 
         <menuitem id="menu_study_config" name="Configuration" sequence="999">
-            <menuitem id="menu_study_study_config" name="Études">                
+            <menuitem id="menu_study_study_config" name="Études">         
+                <menuitem id="menu_study_author"
+                    action="action_study_author"
+                    sequence="1"
+                    parent="studies_base.menu_study_study_config" />       
                 <menuitem id="menu_study_eligibility_condition_body_site"
                     action="action_study_eligibility_condition_body_site"
                     sequence="2"/>

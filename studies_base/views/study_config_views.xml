@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <odoo>
     <!-- VIEWS -->
-    
+    <record id="view_study_author_tree" model="ir.ui.view">
+        <field name="name">study.author.tree</field>
+        <field name="model">study.author</field>        
+        <field name="arch" type="xml">
+            <tree string="Platformes techniques d'étude" editable="bottom">
+                <field name="sequence" widget="handle"/>
+                <field name="name"/>      
+                <field name="value" />          
+            </tree>
+        </field>
+    </record>
     <record id="view_study_eligibility_condition_body_site_tree" model="ir.ui.view">
         <field name="name">study.eligibility.condition.body.site.tree</field>
         <field name="model">study.eligibility.condition.body.site</field>        
@@ -156,7 +166,11 @@
     
 
     <!-- ACTIONS -->
-    
+    <record id="action_study_author" model="ir.actions.act_window">
+        <field name="name">Platformes techniques d'étude</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">study.author</field>        
+    </record>
     <record id="action_study_eligibility_condition_body_site" model="ir.actions.act_window">
         <field name="name">Localisations anatomiques des affections</field>
         <field name="type">ir.actions.act_window</field>
