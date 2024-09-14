@@ -18,4 +18,7 @@ class StudyParticipant(models.Model):
         
     identifier = fields.Char("Idientifiants de l'enrôlement", readonly=True)
 
+    created = fields.Datetime("Date de création")
+    updated = fields.Datetime("Date mise à jour")
+
     

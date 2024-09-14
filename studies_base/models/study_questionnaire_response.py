@@ -20,3 +20,6 @@ class StudyQuestionnaireResponse(models.Model):
     source = fields.Many2one("res.partner", string="Contact", domain=[("category_patient",'=',1)], readonly=True)
     firstname = fields.Char("Prénom", related="source.firstname")
     lastname = fields.Char("Nom", related="source.lastname")
+
+    created = fields.Datetime("Date de création")
+    updated = fields.Datetime("Date mise à jour")
