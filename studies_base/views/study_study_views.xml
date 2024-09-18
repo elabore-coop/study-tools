@@ -10,7 +10,7 @@
                 <field name="name"/>            
                 <field name="period_start"/>            
                 <field name="period_end"/>            
-                <field name="progress_status"/>                
+                <field name="progress_status_id"/>                
             </tree>
         </field>
     </record>
@@ -41,7 +41,7 @@
                         <group name="study_status_left">
                             <field name="period_start" />
                             <field name="period_end" />
-                            <field name="progress_status" />
+                            <field name="progress_status_id" />
                         </group>
                         <group name="study_status_right">
                             
@@ -51,7 +51,7 @@
                         <group name="description_left">  
                             <field name="description_summary" />                          
                             <field name="description" />
-                            <field name="keyword" />
+                            <field name="keywords" widget="many2many_tags" />
                         </group>
                         <group name="description_right">
                             <field name="primary_purpose_type" />     

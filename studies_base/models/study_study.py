@@ -13,12 +13,12 @@ class StudyStudy(models.Model):
 
     period_start = fields.Date("Début de l'étude")
     period_end = fields.Date("Fin de l'étude")
-    progress_status = fields.Many2one("study.progress.status", string="Avancement de l'étude")
-
+    progress_status_id = fields.Many2one("study.progress.status", string="Avancement de l'étude") #should be computed to actual progress status
+    progress_status = fields.One2many("study.progress.status", "study_id", "All progress status")
 
     description_summary = fields.Char("Brève description de l'étude")
     description = fields.Text("Description de l'étude")
-    keyword = fields.Many2one("study.keyword", string="Mots-clés")
+    keywords = fields.Many2many("study.keyword", string="Mots-clés")
     primary_purpose_type = fields.Many2one("study.purpose.type", string="Objectif principal")
     part_of = fields.Many2one("study.study", string="Fait partie de")
     version = fields.Char("Version")
@@ -53,3 +53,6 @@ class StudyStudy(models.Model):
     
 
     note = fields.Text("Annotations")
+
+    created = fields.Datetime('Created')
+    updated = fields.Datetime('Updated')
