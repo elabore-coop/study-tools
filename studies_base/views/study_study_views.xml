@@ -78,7 +78,7 @@
                                 <group name="recruitment_left">
                                     <field name="recruitment_target_number" />
                                     <field name="recruitment_max_number" />
-                                    <field name="recruitment_eligibility_gender" widget="many2many_tags" />
+                                    <field name="recruitment_eligibility_gender" />
                                     <field name="recruitment_eligibility_age_min" />
                                     <field name="recruitment_eligibility_age_max" />
                                     <field name="recruitment_eligibility_condition_clinical_status" widget="many2many_tags" />

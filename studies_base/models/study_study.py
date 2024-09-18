@@ -32,7 +32,7 @@ class StudyStudy(models.Model):
 
     recruitment_target_number = fields.Integer("Nombre de participants à recruter")
     recruitment_max_number = fields.Integer("Nombre limite de participations")
-    recruitment_eligibility_gender = fields.Many2many("study.gender", string="Genre")
+    recruitment_eligibility_gender = fields.Many2one("study.gender", string="Genre")
     recruitment_eligibility_age_min = fields.Integer("Âge min")
     recruitment_eligibility_age_max = fields.Integer("Âge max")
     recruitment_eligibility_condition_clinical_status = fields.Many2many("study.eligibility.condition.clinical.status", string="Statut de l'affectation (malade, ancien malade...)")
