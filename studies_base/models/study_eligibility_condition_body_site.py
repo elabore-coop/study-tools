@@ -9,5 +9,5 @@ class StudyEligibilityConditionBodySite(models.Model):
 
     name = fields.Char("Name")
     sequence = fields.Integer("Sequence")
-    value = fields.Char("Value")
+    value = fields.Integer("Value")
 
