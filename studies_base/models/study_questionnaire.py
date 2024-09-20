@@ -33,3 +33,7 @@ class StudyQuestionnaire(models.Model):
 
     created = fields.Datetime("Created")
     date = fields.Datetime("Date")
+
+    def copy(self, default=None):
+        default = dict(default or {}, identifier_primary_id=None)
+        return super().copy(default)
