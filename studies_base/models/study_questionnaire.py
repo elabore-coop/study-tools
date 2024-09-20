@@ -16,7 +16,7 @@ class StudyQuestionnaire(models.Model):
     effective_period_end = fields.Datetime("Fin de la collecte")
 
     purpose = fields.Text("Objectif")
-    subject_type = fields.Many2one("study.questionnaire.subject.type", string="Sujets")
+    subject_type = fields.Many2many("study.questionnaire.subject.type", string="Sujets")
     description = fields.Text("Description du questionnaire")
 
     jurisdiction = fields.Many2many("study.region", string="Zones géographiques ciblées")
@@ -30,3 +30,6 @@ class StudyQuestionnaire(models.Model):
 
     copyright = fields.Text("Copyright")
     copyright_label = fields.Char("Propriétaire et année du copyright")
+
+    created = fields.Datetime("Created")
+    date = fields.Datetime("Date")

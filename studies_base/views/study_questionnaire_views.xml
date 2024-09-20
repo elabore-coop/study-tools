@@ -49,7 +49,7 @@
                     <group name="description" string="Description">
                         <group name="description_left">
                             <field name="purpose" />
-                            <field name="subject_type" />                            
+                            <field name="subject_type" widget="many2many_tags" />                            
                         </group>
                         <group name="description_right">
                             <field name="description" />
