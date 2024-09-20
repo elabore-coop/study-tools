@@ -26,7 +26,7 @@ class StudyStudy(models.Model):
     status = fields.Many2one("study.status", string="Status de la publication")
 
     site = fields.Many2one("res.partner", string="Lieu de l'étude")
-    identitifer_author = fields.Char("ID plateforme")
+    identifier_author = fields.Char("ID plateforme")
 
     identifier_primary_id  = fields.Char("Idientifiant Seintinelles", readonly=True)
 

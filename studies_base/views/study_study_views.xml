@@ -64,7 +64,7 @@
                     <group name="technique" string="Technique">
                         <group name="technique_left">
                             <field name="site" />                            
-                            <field name="identitifer_author" />
+                            <field name="identifier_author" />
                         </group>
                         <group name="technique_right">
                             <field name="identifier_primary_id" />
