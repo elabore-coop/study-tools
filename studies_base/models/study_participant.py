@@ -7,7 +7,7 @@ from odoo.exceptions import UserError
 class StudyParticipant(models.Model):
     _name = "study.participant"
 
-    identifier_primary_id = fields.Char("Idientifiant Seintinelles", readonly=True)
+    identifier_primary_id = fields.Char("Identifiant Seintinelles", readonly=True)
     part_of = fields.Many2one("study.study", string="Étude", readonly=True)
 
     subject = fields.Many2one("res.partner", string="Contact", domain=[("category_patient",'=',1)], readonly=True)

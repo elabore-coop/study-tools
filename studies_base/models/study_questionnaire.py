@@ -21,7 +21,7 @@ class StudyQuestionnaire(models.Model):
 
     jurisdiction = fields.Many2many("study.region", string="Zones géographiques ciblées")
     derived_from = fields.Many2one("study.questionnaire", string="Dérivé de")
-    version = fields.Char("Vestion")
+    version = fields.Char("Version")
     status = fields.Many2one("study.questionnaire.status", string="Statut de publication")
 
     experimental = fields.Boolean("Questionnaire de test")

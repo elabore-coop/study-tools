@@ -7,7 +7,7 @@ from odoo.exceptions import UserError
 class StudyQuestionnaireResponse(models.Model):
     _name = "study.questionnaire.response"
 
-    identifier_primary_id = fields.Char("Idientifiant Seintinelles", readonly=True)
+    identifier_primary_id = fields.Char("Identifiant Seintinelles", readonly=True)
     progress_status = fields.Many2one("study.questionnaire.response.progress.status", string="État d'avancement")    
     authored = fields.Datetime("Date de saisie des réponses", readonly=True)
     
