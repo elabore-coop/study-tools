@@ -28,7 +28,7 @@ class StudyStudy(models.Model):
     site = fields.Many2one("res.partner", string="Lieu de l'étude")
     identifier_author = fields.Char("ID plateforme")
 
-    identifier_primary_id  = fields.Char("Identifiant Seintinelles", readonly=True)
+    identifier_primary_id  = fields.Char("Identifiant Seintinelles", readonly=True, copy=False)
 
     recruitment_target_number = fields.Integer("Nombre de participants à recruter")
     recruitment_max_number = fields.Integer("Nombre limite de participations")
@@ -60,3 +60,7 @@ class StudyStudy(models.Model):
     def copy(self, default=None):
         default = dict(default or {}, identifier_primary_id=None)
         return super().copy(default)
+    
+    @api.depends('title', 'name')
+    def name_get(self):
+        return [(study.id, f"[{study.name}] {study.title}") for study in self]
