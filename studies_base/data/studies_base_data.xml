@@ -24,9 +24,9 @@
         </record>
 
         <!-- study.participant.progress.status -->
-        <record id="study_participant_progress_status_REGISTRED" model="study.participant.progress.status">
+        <record id="study_participant_progress_status_REGISTERED" model="study.participant.progress.status">
             <field name="name">Inscrit</field>
-            <field name="value">REGISTRED</field>
+            <field name="value">REGISTERED</field>
         </record>
 
         <record id="study_participant_progress_status_ACTIVE" model="study.participant.progress.status">
@@ -61,6 +61,47 @@
             <field name="value">WITHDRAWN</field>
         </record>
 
+
+        <!-- study.phase -->
+        <record id="study_phase_NA" model="study.phase">
+            <field name="name">Sans phase</field>
+            <field name="value">NA</field>
+        </record>
+
+        <record id="study_phase_EARLY_PHASE_1" model="study.phase">
+            <field name="name">Phase précoce 1</field>
+            <field name="value">EARLY-PHASE-1</field>
+        </record>
+
+        <record id="study_phase_PHASE_1" model="study.phase">
+            <field name="name">Phase 1</field>
+            <field name="value">PHASE-1</field>
+        </record>
+
+        <record id="study_phase_PHASE_1_PHASE_2" model="study.phase">
+            <field name="name">Phase 1 / Phase 2</field>
+            <field name="value">PHASE-1-PHASE-2</field>
+        </record>
+
+        <record id="study_phase_PHASE_2" model="study.phase">
+            <field name="name">Phase 2</field>
+            <field name="value">PHASE-2</field>
+        </record>
+
+        <record id="study_phase_PHASE_2_PHASE_3" model="study.phase">
+            <field name="name">Phase 2 / Phase 3</field>
+            <field name="value">PHASE-2-PHASE-3</field>
+        </record>
+
+        <record id="study_phase_PHASE_3" model="study.phase">
+            <field name="name">Phase 3</field>
+            <field name="value">PHASE-3</field>
+        </record>
+
+        <record id="study_phase_PHASE_4" model="study.phase">
+            <field name="name">Phase 4</field>
+            <field name="value">PHASE-4</field>
+        </record>
 
 
         <!-- study.questionnaire.status -->
@@ -121,7 +162,7 @@
         </record>
 
 
-        
+
 
 
         <!-- study.questionnaire.subject.type -->
