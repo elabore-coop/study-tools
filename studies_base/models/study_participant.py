@@ -32,3 +32,5 @@ class StudyParticipant(models.Model):
 
     created = fields.Datetime("Date de création")
     updated = fields.Datetime("Date mise à jour")
+
+    active = fields.Boolean("Actif", default=True)

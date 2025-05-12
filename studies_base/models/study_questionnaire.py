@@ -19,10 +19,14 @@ class StudyQuestionnaire(models.Model):
     subject_type = fields.Many2many("study.questionnaire.subject.type", string="Sujets")
     description = fields.Text("Description du questionnaire")
 
-    jurisdiction = fields.Many2many("study.region", string="Zones géographiques ciblées")
+    jurisdiction = fields.Many2many(
+        "study.region", string="Zones géographiques ciblées"
+    )
     derived_from = fields.Many2one("study.questionnaire", string="Dérivé de")
     version = fields.Char("Version")
-    status = fields.Many2one("study.questionnaire.status", string="Statut de publication")
+    status = fields.Many2one(
+        "study.questionnaire.status", string="Statut de publication"
+    )
 
     experimental = fields.Boolean("Questionnaire de test")
     identifier_author = fields.Char("ID plateforme")
@@ -33,6 +37,8 @@ class StudyQuestionnaire(models.Model):
 
     created = fields.Datetime("Created")
     date = fields.Datetime("Date")
+
+    active = fields.Boolean("Actif", default=True)
 
     def copy(self, default=None):
         default = dict(default or {}, identifier_primary_id=None)
