@@ -27,6 +27,7 @@ class StudyParticipant(models.Model):
         "study.participant.state", string="État de la participation", readonly=True
     )
 
+    ## Studyparticipant.identifier.author.value
     identifier = fields.Char("Identifiants de l'enrôlement", readonly=True)
 
     created = fields.Datetime("Date de création")
