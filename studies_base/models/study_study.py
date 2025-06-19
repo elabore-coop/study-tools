@@ -10,8 +10,8 @@ class StudyStudy(models.Model):
     title = fields.Char("Nom de l'étude")
     name = fields.Char("Acronyme")
 
-    period_start = fields.Date("Début de l'étude")
-    period_end = fields.Date("Fin de l'étude")
+    period_start = fields.Datetime("Début de l'étude")
+    period_end = fields.Datetime("Fin de l'étude")
     progress_status_id = fields.Many2one(
         "study.progress.status", string="Avancement de l'étude"
     )  # should be computed to actual progress status
