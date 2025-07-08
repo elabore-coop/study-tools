@@ -83,4 +83,6 @@ class StudyStudy(models.Model):
 
     @api.depends("title", "name")
     def name_get(self):
+        if not self.name:
+            return [(study.id, study.title) for study in self]
         return [(study.id, f"[{study.name}] {study.title}") for study in self]
