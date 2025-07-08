@@ -3,13 +3,13 @@
     <!-- TREE VIEW -->
     <record id="view_study_questionnaire_tree" model="ir.ui.view">
         <field name="name">study.questionnaire.tree</field>
-        <field name="model">study.questionnaire</field>        
+        <field name="model">study.questionnaire</field>
         <field name="arch" type="xml">
-            <tree string="Questionnaires">                
-                <field name="title"/>            
-                <field name="name"/>            
-                <field name="effective_period_start"/>            
-                <field name="effective_period_end"/>                            
+            <tree string="Questionnaires">
+                <field name="title"/>
+                <field name="name"/>
+                <field name="effective_period_start"/>
+                <field name="effective_period_end"/>
             </tree>
         </field>
     </record>
@@ -17,7 +17,7 @@
     <!-- FORM VIEW -->
     <record id="view_study_questionnaire_form" model="ir.ui.view">
         <field name="name">study.questionnaire.form</field>
-        <field name="model">study.questionnaire</field>        
+        <field name="model">study.questionnaire</field>
         <field name="arch" type="xml">
             <form string="Questionnaire">
                 <header>
@@ -27,7 +27,7 @@
                     <div class="oe_button_box" name="button_box">
                         <!-- big buttons -->
                     </div>
-                
+
                     <div class="oe_title">
                         <h1>
                             <label for="title" string="Nom du questionnaire" /><field name="title" />
@@ -49,7 +49,7 @@
                     <group name="description" string="Description">
                         <group name="description_left">
                             <field name="purpose" />
-                            <field name="subject_type" widget="many2many_tags" />                            
+                            <field name="subject_type" widget="many2many_tags" />
                         </group>
                         <group name="description_right">
                             <field name="description" />
@@ -66,29 +66,43 @@
                         </group>
                         <group name="technique_right">
                             <field name="identifier_primary_id" />
-                            <field name="create_date" />
-                            <field name="write_date" />
+                            <field name="created" />
+                            <field name="date" />
                         </group>
                     </group>
-                    <notebook>                        
+                    <notebook>
                         <page string="Copyright" name="copyright">
                             <group name="copyright">
                                 <field name="copyright" />
                                 <field name="copyright_label" />
                             </group>
-                        </page>                        
+                        </page>
                     </notebook>
                 </sheet>
             </form>
         </field>
     </record>
-       
-        
+
+
     <!-- ACTIONS -->
     <record id="action_study_questionnaire" model="ir.actions.act_window">
         <field name="name">Questionnaires</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">study.questionnaire</field>        
+        <field name="res_model">study.questionnaire</field>
     </record>
-        
+
+    <!-- SEARCH VIEW -->
+    <record id="view_study_questionnaire_search" model="ir.ui.view">
+        <field name="name">study.questionnaire.search</field>
+        <field name="model">study.questionnaire</field>
+        <field name="arch" type="xml">
+            <search string="Questionnaires">
+                <field name="title" string="Nom"/>
+                <field name="name" string="Acronyme"/>
+                <field name="identifier_primary_id" string="Seintinelles ID"/>
+                <field name="effective_period_start" string="Effective Start"/>
+                <field name="effective_period_end" string="Effective End"/>
+            </search>
+        </field>
+    </record>
 </odoo>
