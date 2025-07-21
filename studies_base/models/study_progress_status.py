@@ -18,5 +18,5 @@ class StudyProgressStatus(models.Model):
         ('COMPLETED', 'Terminée'), 
         ('WITHDRAWN', 'Annulé')], string="Avancement de l'étude")
     actual = fields.Boolean("Statut actuel")
-    date_begin = fields.Date("Date de début de l'état")
-    date_end = fields.Date("Date de fin de l'état")
+    date_begin = fields.Datetime("Date de début de l'état")
+    date_end = fields.Datetime("Date de fin de l'état")
