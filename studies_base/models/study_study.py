@@ -2,6 +2,9 @@
 from odoo import api, fields, models, _
 from odoo import osv
 from odoo.exceptions import UserError
+import logging
+
+_logger = logging.getLogger(__name__)
 
 
 class StudyStudy(models.Model):
@@ -13,7 +16,9 @@ class StudyStudy(models.Model):
     period_start = fields.Datetime("Début de l'étude")
     period_end = fields.Datetime("Fin de l'étude")
     progress_status_id = fields.Many2one(
-        "study.progress.status", string="Avancement de l'étude"
+        "study.progress.status",
+        string="Avancement de l'étude",
+        domain="[('study_id', '=', id)]",
     )  # should be computed to actual progress status
     progress_status = fields.One2many(
         "study.progress.status", "study_id", "All progress status"
@@ -72,8 +77,24 @@ class StudyStudy(models.Model):
 
     note = fields.Text("Annotations")
 
-    created = fields.Datetime("Created")
-    updated = fields.Datetime("Updated")
+    created = fields.Datetime(
+        "Created", readonly=True, compute="_compute_created", store=True
+    )
+    updated = fields.Datetime(
+        "Updated", readonly=True, compute="_compute_updated", store=True
+    )
+
+    @api.depends("create_date")
+    def _compute_created(self):
+        for record in self:
+            if not record.created:
+                record.created = record.create_date
+
+    @api.depends("write_date")
+    def _compute_updated(self):
+        for record in self:
+            _logger.info(f"Record ID: {record.id}, write_date: {record.write_date}")
+            record.updated = record.write_date
 
     active = fields.Boolean("Actif", default=True)
 
