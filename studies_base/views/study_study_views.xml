@@ -3,14 +3,14 @@
     <!-- TREE VIEW -->
     <record id="view_study_study_tree" model="ir.ui.view">
         <field name="name">study.study.tree</field>
-        <field name="model">study.study</field>        
+        <field name="model">study.study</field>
         <field name="arch" type="xml">
-            <tree string="Études">                
-                <field name="title"/>            
-                <field name="name"/>            
-                <field name="period_start"/>            
-                <field name="period_end"/>            
-                <field name="progress_status_id"/>                
+            <tree string="Études">
+                <field name="title"/>
+                <field name="name"/>
+                <field name="period_start"/>
+                <field name="period_end"/>
+                <field name="progress_status_id"/>
             </tree>
         </field>
     </record>
@@ -18,7 +18,7 @@
     <!-- FORM VIEW -->
     <record id="view_study_study_form" model="ir.ui.view">
         <field name="name">study.study.form</field>
-        <field name="model">study.study</field>        
+        <field name="model">study.study</field>
         <field name="arch" type="xml">
             <form string="Étude">
                 <header>
@@ -28,7 +28,7 @@
                     <div class="oe_button_box" name="button_box">
                         <!-- big buttons -->
                     </div>
-                
+
                     <div class="oe_title">
                         <h1>
                             <label for="title" string="Nom de l'étude" /><field name="title" />
@@ -44,18 +44,18 @@
                             <field name="progress_status_id" />
                         </group>
                         <group name="study_status_right">
-                            
+
                         </group>
                     </group>
                     <group name="description" string="Description">
-                        <group name="description_left">  
-                            <field name="description_summary" />                          
+                        <group name="description_left">
+                            <field name="description_summary" />
                             <field name="description" />
                             <field name="keywords" widget="many2many_tags" />
                         </group>
                         <group name="description_right">
-                            <field name="primary_purpose_type" />     
-                            <field name="part_of" />                            
+                            <field name="primary_purpose_type" />
+                            <field name="part_of" />
                             <field name="version" />
                             <field name="phase" />
                             <field name="status" />
@@ -63,13 +63,13 @@
                     </group>
                     <group name="technique" string="Technique">
                         <group name="technique_left">
-                            <field name="site" />                            
+                            <field name="site" />
                             <field name="identifier_author" />
                         </group>
                         <group name="technique_right">
                             <field name="identifier_primary_id" />
-                            <field name="create_date" />
-                            <field name="write_date" />
+                            <field name="created" />
+                            <field name="updated" />
                         </group>
                     </group>
                     <notebook>
@@ -92,7 +92,7 @@
                                     <field name="region" widget="many2many_tags" />
                                 </group>
                             </group>
-                        </page>                                                
+                        </page>
                         <page string="Notes" name="notes">
                             <field name="note" />
                         </page>
@@ -101,13 +101,28 @@
             </form>
         </field>
     </record>
-       
-        
+
+
     <!-- ACTIONS -->
     <record id="action_study_study" model="ir.actions.act_window">
         <field name="name">Études</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">study.study</field>        
+        <field name="res_model">study.study</field>
     </record>
-        
+
+    <!-- SEARCH -->
+    <record id="view_study_study_search" model="ir.ui.view">
+        <field name="name">study.study.search</field>
+        <field name="model">study.study</field>
+        <field name="arch" type="xml">
+            <search string="Études">
+                <field name="title" string="Nom de l'étude" />
+                <field name="name" string="Acronyme" />
+                <field name="identifier_primary_id" string="Seintinelles ID"/>
+                <field name="period_start" string="Date de début" />
+                <field name="period_end" string="Date de fin" />
+            </search>
+        </field>
+    </record>
+
 </odoo>
