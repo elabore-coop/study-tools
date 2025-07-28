@@ -102,8 +102,13 @@ class StudyStudy(models.Model):
         default = dict(default or {}, identifier_primary_id=None)
         return super().copy(default)
 
-    @api.depends("title", "name")
-    def name_get(self):
-        if not self.name:
-            return [(study.id, study.title) for study in self]
-        return [(study.id, f"[{study.name}] {study.title}") for study in self]
+
+@api.depends("title", "name")
+def name_get(self):
+    result = []
+    for study in self:
+        if not study.name:
+            result.append((study.id, study.title))
+        else:
+            result.append((study.id, f"[{study.name}] {study.title}"))
+    return result
