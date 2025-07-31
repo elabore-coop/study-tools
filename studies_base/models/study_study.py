@@ -19,7 +19,8 @@ class StudyStudy(models.Model):
         "study.progress.status",
         string="Avancement de l'étude",
         domain="[('study_id', '=', id)]",
-    )  # should be computed to actual progress status
+        compute="_compute_progress_status_id"
+    )
     progress_status = fields.One2many(
         "study.progress.status", "study_id", "All progress status"
     )
@@ -83,6 +84,7 @@ class StudyStudy(models.Model):
     updated = fields.Datetime(
         "Updated", readonly=True, compute="_compute_updated", store=True
     )
+    active = fields.Boolean("Actif", default=True)
 
     @api.depends("create_date")
     def _compute_created(self):
@@ -96,7 +98,11 @@ class StudyStudy(models.Model):
             _logger.info(f"Record ID: {record.id}, write_date: {record.write_date}")
             record.updated = record.write_date
 
-    active = fields.Boolean("Actif", default=True)
+    @api.depends("progress_status")
+    def _compute_progress_status_id(self):
+        for record in self:
+            unfinished_progress_status = record.progress_status.filtered(lambda x: x.actual == True)
+            record.progress_status_id = unfinished_progress_status.id if len(unfinished_progress_status) == 1 else None
 
     def copy(self, default=None):
         default = dict(default or {}, identifier_primary_id=None)

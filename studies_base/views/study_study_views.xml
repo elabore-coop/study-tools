@@ -22,7 +22,12 @@
         <field name="arch" type="xml">
             <form string="Étude">
                 <header>
-                    <!-- action buttons -->
+                  <!-- action buttons -->
+		  <button name="%(action_create_progress_status_wizard)d"
+                          string="Update Status"
+			  class="oe_highlight"
+			  type="action"
+			  />
                 </header>
                 <sheet>
                     <div class="oe_button_box" name="button_box">
@@ -95,6 +100,16 @@
                         </page>
                         <page string="Notes" name="notes">
                             <field name="note" />
+                        </page>
+			<page string="Progress status" name="progress_status" groups="base.group_no_one">
+			  <field name="progress_status" nolabel="1">
+                            <tree create="false" delete="false" default_order="date_begin DESC" >
+                              <field name="state" />
+                              <field name="date_begin" />
+                              <field name="date_end" />
+                              <field name="actual" />
+                            </tree>
+			  </field>
                         </page>
                     </notebook>
                 </sheet>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="create_progress_status_wizard_view_form" model="ir.ui.view">
+        <field name="name">create.progress.status.wizard.view.form</field>
+        <field name="model">create.progress.status</field>
+        <field name="arch" type="xml">
+            <form string="Update study progress status">
+                <sheet>
+                    <group>
+                        <field name="state" />
+                    </group>
+                </sheet>
+                <footer>
+                    <button string="Update" name="create_progress_status" type="object"
+                        class="btn-primary" />
+                    <button string="Cancel" class="btn-secondary" special="cancel" />
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record
+        id="action_create_progress_status_wizard" model="ir.actions.act_window">
+        <field name="name">Create Progress Status</field>
+        <field name="res_model">create.progress.status</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="create_progress_status_wizard_view_form" />
+        <field name="target">new</field>
+    </record>
+</odoo>
