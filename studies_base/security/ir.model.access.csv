@@ -23,3 +23,4 @@ access_study_participant_progress_status_admin,study.participant.progress.status
 access_study_participant_state_admin,study.participant.state.admin,model_study_participant_state,base.group_user,1,1,1,1
 access_study_questionnaire_response_progress_status_admin,study.questionnaire.response.progress.status.admin,model_study_questionnaire_response_progress_status,base.group_user,1,1,1,1
 access_study_author_admin,study.author.admin,model_study_author,base.group_user,1,1,1,1
+access_create_progress_status_wizard,create_progress_status_wizard.access,model_create_progress_status,base.group_user,1,1,1,0

@@ -12,18 +12,19 @@
     "summary": "Module containing base fields and views for studies",
     # any module necessary for this one to work correctly
     "depends": [
-        "base",       
-        "partner_firstname"       
+        "base",
+        "partner_firstname"
     ],
     "qweb": [],
     "external_dependencies": {
         "python": [],
     },
     # always loaded
-    "data": [        
-        # "security/security.xml",        
-        "data/studies_base_data.xml",       
-        "security/ir.model.access.csv",       
+    "data": [
+        # "security/security.xml",
+        "data/studies_base_data.xml",
+        "security/ir.model.access.csv",
+        "wizards/create_progress_status.xml",
         "views/study_config_views.xml",
         "views/study_study_views.xml",
         "views/study_progress_status_views.xml",
