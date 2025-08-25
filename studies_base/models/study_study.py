@@ -19,7 +19,7 @@ class StudyStudy(models.Model):
         "study.progress.status",
         string="Avancement de l'étude",
         domain="[('study_id', '=', id)]",
-        compute="_compute_progress_status_id"
+        compute="_compute_progress_status_id",
     )
     progress_status = fields.One2many(
         "study.progress.status", "study_id", "All progress status"
@@ -101,20 +101,25 @@ class StudyStudy(models.Model):
     @api.depends("progress_status")
     def _compute_progress_status_id(self):
         for record in self:
-            unfinished_progress_status = record.progress_status.filtered(lambda x: x.actual == True)
-            record.progress_status_id = unfinished_progress_status.id if len(unfinished_progress_status) == 1 else None
+            unfinished_progress_status = record.progress_status.filtered(
+                lambda x: x.actual == True
+            )
+            record.progress_status_id = (
+                unfinished_progress_status.id
+                if len(unfinished_progress_status) == 1
+                else None
+            )
 
     def copy(self, default=None):
         default = dict(default or {}, identifier_primary_id=None)
         return super().copy(default)
 
-
-@api.depends("title", "name")
-def name_get(self):
-    result = []
-    for study in self:
-        if not study.name:
-            result.append((study.id, study.title))
-        else:
-            result.append((study.id, f"[{study.name}] {study.title}"))
-    return result
+    @api.depends("title", "name")
+    def name_get(self):
+        result = []
+        for study in self:
+            if not study.name:
+                result.append((study.id, study.title))
+            else:
+                result.append((study.id, f"[{study.name}] {study.title}"))
+        return result
