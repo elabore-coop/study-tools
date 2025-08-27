@@ -3,13 +3,13 @@
     <!-- TREE VIEW -->
     <record id="view_study_participant_tree" model="ir.ui.view">
         <field name="name">study.participant.tree</field>
-        <field name="model">study.participant</field>        
+        <field name="model">study.participant</field>
         <field name="arch" type="xml">
-            <tree string="Participants">                
-                <field name="part_of"/>            
-                <field name="subject"/>            
-                <field name="firstname"/>            
-                <field name="lastname"/>            
+            <tree string="Participants">
+                <field name="part_of"/>
+                <field name="subject"/>
+                <field name="firstname"/>
+                <field name="lastname"/>
             </tree>
         </field>
     </record>
@@ -17,7 +17,7 @@
     <!-- FORM VIEW -->
     <record id="view_study_participant_form" model="ir.ui.view">
         <field name="name">study.participant.form</field>
-        <field name="model">study.participant</field>        
+        <field name="model">study.participant</field>
         <field name="arch" type="xml">
             <form string="Participant">
                 <header>
@@ -27,7 +27,7 @@
                     <div class="oe_button_box" name="button_box">
                         <!-- big buttons -->
                     </div>
-                
+
                     <div class="oe_title">
                         <h1>
                             <label for="identifier_primary_id" string="Idientifiant Seintinelles" /><field name="identifier_primary_id" />
@@ -43,7 +43,7 @@
                             <field name="firstname" />
                         </group>
                         <group name="participant_right">
-                            
+
                         </group>
                     </group>
                     <group name="participation" string="Participation">
@@ -51,30 +51,30 @@
                             <field name="progress_status" />
                             <field name="state" />
                         </group>
-                        <group name="participation_right">                            
+                        <group name="participation_right">
                             <field name="identifier" />
                         </group>
-                    </group>                    
+                    </group>
                     <group name="technique" string="Technique">
                         <group name="technique_left">
-                            <field name="create_date" />
-                            <field name="write_date" />
+                            <field name="created" />
+                            <field name="date" />
                         </group>
                         <group name="technique_right">
                         </group>
                     </group>
-                    
+
                 </sheet>
             </form>
         </field>
     </record>
-       
-        
+
+
     <!-- ACTIONS -->
     <record id="action_study_participant" model="ir.actions.act_window">
         <field name="name">Participants</field>
         <field name="type">ir.actions.act_window</field>
-        <field name="res_model">study.participant</field>        
+        <field name="res_model">study.participant</field>
     </record>
-        
+
 </odoo>
