@@ -131,11 +131,19 @@
         <field name="model">study.study</field>
         <field name="arch" type="xml">
             <search string="Études">
-                <field name="title" string="Nom de l'étude" />
-                <field name="name" string="Acronyme" />
+                <field name="active" string="Actif" />
+                <field name="description" string="Description" />
+                <field name="identifier_author" string="ID Plateforme" />
                 <field name="identifier_primary_id" string="Seintinelles ID"/>
-                <field name="period_start" string="Date de début" />
+                <field name="keywords" string="Mots-clés" />
+                <field name="name" string="Acronyme" />
                 <field name="period_end" string="Date de fin" />
+                <field name="period_start" string="Date de début" />
+                <field name="phase" string="Phase" />
+                <field name="progress_status_id" string="Statut" />
+                <field name="region" string="Région" />
+                <field name="title" string="Nom de l'étude" />
+                <field name="version" string="Version" />
             </search>
         </field>
     </record>
