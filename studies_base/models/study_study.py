@@ -95,6 +95,9 @@ class StudyStudy(models.Model):
     @api.depends("write_date")
     def _compute_updated(self):
         for record in self:
+            ## XXXb0g : the following two lines are to be removed when all records will have been updated during migration
+            if record.updated:
+                continue
             _logger.info(f"Record ID: {record.id}, write_date: {record.write_date}")
             record.updated = record.write_date
 

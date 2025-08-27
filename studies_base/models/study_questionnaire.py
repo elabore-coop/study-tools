@@ -36,16 +36,19 @@ class StudyQuestionnaire(models.Model):
     created = fields.Datetime("Created", compute="_compute_created", readonly=True)
     date = fields.Datetime("Date", compute="_compute_updated", readonly=True)
 
+    @api.depends("write_date")
+    def _compute_updated(self):
+        for record in self:
+            ## XXXb0g : the following two lines are to be removed when all records will have been updated during migration
+            if record.updated:
+                continue
+            record.updated = record.write_date
+
     @api.depends("create_date")
     def _compute_created(self):
         for record in self:
             if not record.created:
                 record.created = record.create_date
-
-    @api.depends("write_date")
-    def _compute_updated(self):
-        for record in self:
-            record.date = record.write_date
 
     active = fields.Boolean("Actif", default=True)
 
