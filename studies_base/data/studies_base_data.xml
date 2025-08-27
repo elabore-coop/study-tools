@@ -172,7 +172,7 @@
         </record>
 
         <record id="study_questionnaire_subject_type_PRACTITIONER" model="study.questionnaire.subject.type">
-            <field name="name">Praticient</field>
+            <field name="name">Praticien</field>
             <field name="value">PRACTITIONER</field>
         </record>
 
