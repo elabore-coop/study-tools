@@ -58,7 +58,7 @@
                     <group name="technique" string="Technique">
                         <group name="technique_left">
                             <field name="created" />
-                            <field name="date" />
+                            <field name="updated" />
                         </group>
                         <group name="technique_right">
                         </group>
