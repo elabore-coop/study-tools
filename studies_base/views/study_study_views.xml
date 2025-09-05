@@ -46,7 +46,7 @@
                         <group name="study_status_left">
                             <field name="period_start" />
                             <field name="period_end" />
-                            <field name="progress_status_id" />
+                            <field name="progress_status_id" options="{'no_open': True}" />
                         </group>
                         <group name="study_status_right">
 
