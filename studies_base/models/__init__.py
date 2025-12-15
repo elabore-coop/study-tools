@@ -19,3 +19,4 @@ from . import study_eligibility_condition_clinical_status
 from . import study_eligibility_condition_body_site
 from . import study_progress_status
 from . import study_author
+from . import res_partner

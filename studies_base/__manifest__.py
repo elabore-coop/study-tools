@@ -32,6 +32,7 @@
         "views/study_questionnaire_response_views.xml",
         "views/study_participant_views.xml",
         "views/study_menu.xml",
+        "views/res_partner_views.xml",
     ],
     # only loaded in demonstration mode
     "demo": [],
