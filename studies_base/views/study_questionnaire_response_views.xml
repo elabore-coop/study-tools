@@ -73,6 +73,25 @@
         </field>
     </record>
 
+    <!-- SEARCH -->
+    <record id="view_study_questionnaire_response_search" model="ir.ui.view">
+        <field name="name">study.questionnaire.response.search</field>
+        <field name="model">study.questionnaire.response</field>
+        <field name="arch" type="xml">
+            <search string="Études">
+              <field name="active" string="Actif" />
+	      <field name="author" string="Plateforme d'étude" />
+              <field name="identifier_author" string="ID Plateforme" />
+	      <field name="authored" string="Date de saisie des réponses" />
+              <field name="identifier_primary_id" string="Seintinelles ID"/>
+	      <field name="source" string="Contact" />
+              <field name="firstname" string="Prénom" />
+              <field name="lastname" string="Nom" />
+              <field name="progress_status" string="État d'avancement" />
+            </search>
+        </field>
+    </record>
+
 
     <!-- ACTIONS -->
     <record id="action_study_questionnaire_response" model="ir.actions.act_window">

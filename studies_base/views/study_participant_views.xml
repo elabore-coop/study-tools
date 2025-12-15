@@ -69,6 +69,24 @@
         </field>
     </record>
 
+    <!-- SEARCH -->
+    <record id="view_study_participant_search" model="ir.ui.view">
+        <field name="name">study.participant.search</field>
+        <field name="model">study.participant</field>
+        <field name="arch" type="xml">
+          <search string="Participants">
+              <field name="active" string="Actif" />
+              <field name="identifier_primary_id" string="Seintinelles ID"/>
+	      <field name="part_of" string="Étude" />
+	      <field name="subject" string="Contact" />
+              <field name="firstname" string="Prénom" />
+              <field name="lastname" string="Nom" />
+              <field name="progress_status" string="État d'avancement" />
+	      <field name="state" string="Statut" />
+	      <field name="identifier" string="Identifiant" />
+            </search>
+        </field>
+    </record>
 
     <!-- ACTIONS -->
     <record id="action_study_participant" model="ir.actions.act_window">
